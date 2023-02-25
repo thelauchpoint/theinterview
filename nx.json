@@ -21,11 +21,7 @@
       "inputs": ["default", "^production"]
     },
     "lint": {
-      "inputs": [
-        "default",
-        "{workspaceRoot}/.eslintrc.json",
-        "{workspaceRoot}/.eslintignore"
-      ]
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
     }
   },
   "namedInputs": {
@@ -38,6 +34,10 @@
       "!{projectRoot}/.eslintrc.json"
     ],
     "sharedGlobals": []
+  },
+  "cli": {
+    "packageManager": "npm",
+    "defaultCollection": "@nstudio/xplat"
   },
   "generators": {
     "@nrwl/angular:application": {
@@ -53,5 +53,6 @@
     "@nrwl/angular:component": {
       "style": "scss"
     }
-  }
+  },
+  "defaultProject": "web-theinterview"
 }

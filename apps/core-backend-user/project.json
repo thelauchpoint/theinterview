@@ -1,0 +1,60 @@
+{
+  "name": "core-backend-user",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/core-backend-user/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/core-backend-user",
+        "main": "apps/core-backend-user/src/main.ts",
+        "tsConfig": "apps/core-backend-user/tsconfig.app.json",
+        "assets": ["apps/core-backend-user/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/core-backend-user/src/environments/environment.ts",
+              "with": "apps/core-backend-user/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/js:node",
+      "options": {
+        "buildTarget": "core-backend-user:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "core-backend-user:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/core-backend-user/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/core-backend-user"],
+      "options": {
+        "jestConfig": "apps/core-backend-user/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
