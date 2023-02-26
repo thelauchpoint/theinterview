@@ -19,3 +19,12 @@ If you are interested in joining our team, we welcome you to explore our Github 
 Run `nx run start:client` for a dev server. Navigate to http://localhost:4220/. The app will automatically reload if you change any of the source files.
 
 Run `npm run start:core` for a dev api server.
+
+## NativeScript App
+
+To build and run the nativescript app, you will need to follow the nativescript [environment setup](https://docs.nativescript.org/environment-setup.html)
+Run `nx run nativescript-theinterview:ios` for iOS simulator.
+Run `nx run nativescript-theinterview:android` for Android emulator.
+
+If running into issues:
+Run `ns doctor` from apps/nativescript-theinterview to see which pieces of your dev environment is missing to build for iOS or Android. If you run this command from root, you will be missing some packages installed at app level.
