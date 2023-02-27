@@ -36,7 +36,7 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "0.12.0"
+    "zone.js": "~0.12.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "15.2.0",
@@ -63,12 +63,12 @@
     "@nrwl/nest": "15.8.0-beta.7",
     "@nrwl/node": "15.8.0-beta.7",
     "@nrwl/workspace": "15.8.0-beta.7",
-    "@nstudio/angular": "15.0.2",
-    "@nstudio/nativescript": "15.0.2",
-    "@nstudio/nativescript-angular": "15.0.2",
-    "@nstudio/web": "15.0.2",
-    "@nstudio/web-angular": "15.0.2",
-    "@nstudio/xplat": "~15.0.2",
+    "@nstudio/angular": "15.0.3",
+    "@nstudio/nativescript": "15.0.3",
+    "@nstudio/nativescript-angular": "15.0.3",
+    "@nstudio/web": "15.0.3",
+    "@nstudio/web-angular": "15.0.3",
+    "@nstudio/xplat": "~15.0.3",
     "@schematics/angular": "15.2.0",
     "@types/jest": "29.4.0",
     "@types/node": "18.7.1",
@@ -81,7 +81,7 @@
     "jasmine-marbles": "~0.9.1",
     "jest": "29.4.3",
     "jest-environment-jsdom": "29.4.3",
-    "jest-preset-angular": "13.0.0",
+    "jest-preset-angular": "11.0.0",
     "nx": "15.8.0-beta.7",
     "prettier": "^2.6.2",
     "ts-jest": "29.0.5",
@@ -93,4 +93,3 @@
     "framework": "angular"
   }
 }
-
