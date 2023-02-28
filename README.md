@@ -16,7 +16,7 @@ If you are interested in joining our team, we welcome you to explore our Github 
 
 ## Development server
 
-Run `nx run start:client` for a dev server. Navigate to http://localhost:4220/. The app will automatically reload if you change any of the source files.
+Run `npm run start:client` for a dev server. Navigate to http://localhost:4220/. The app will automatically reload if you change any of the source files.
 
 Run `npm run start:core` for a dev api server.
 
