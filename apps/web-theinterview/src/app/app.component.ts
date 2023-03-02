@@ -11,4 +11,7 @@ export class AppComponent extends AppBaseComponent {
   constructor() {
     super();
   }
+  hello() {
+    return 'hello launchpoint';
+  }
 }
