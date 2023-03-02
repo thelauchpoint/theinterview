@@ -1,6 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { MongoBaseService } from './mongo-base.service';
 
+/**
+ * This service holds outlines of several methods you are to implement.
+ * The base service that this service extends also has a method you need to implement.
+ */
 @Injectable()
 export class MongoService extends MongoBaseService {
   /**
