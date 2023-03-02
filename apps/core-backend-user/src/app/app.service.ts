@@ -26,13 +26,19 @@ export class AppService {
    *
    * You mission is to create a new object for that value shaped like this.
    * {label: Policy Pol Eff Date Day, key: policy.pol_eff_date.day }
-   * You will do this for every value. The final example is in ./data/transactions-answer.json
+   * You will do this for every value. The final example of the EXPECTED OUTCOME is in ./data/transactions-answer-data.json
    *
    * EST TIME TO COMPLETE: 15min
+   * We sovled this in less than 60 lines
    * You can run the server to test on re-compile or use the test.
    * Make sure either way the test passes and is useful.
    *
+   * BONUS TIPS
+   * Use this test to develop your method apps/core-backend-user/src/app/app.service.spec.ts
+   * Using VS extention Jest Runner or another of our choice to help will make this easy by isolating the test and you can watch it also.
+   * you can also use `nx test core-backend-user` to test the entire app
    */
+
   createList(input: ObjectWithAnyProperties, skipKeys: string[] = []): { label: string; key: string }[] {
     // The input object is null or undefined: the function will return an empty array.
     // The input object is an empty object: the function will return an empty array.
