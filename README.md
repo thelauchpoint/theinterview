@@ -27,4 +27,4 @@ Run `nx run nativescript-theinterview:ios` for iOS simulator.
 Run `nx run nativescript-theinterview:android` for Android emulator.
 
 If running into issues:
-Run `ns doctor` from apps/nativescript-theinterview to see which pieces of your dev environment is missing to build for iOS or Android. If you run this command from root, you will be missing some packages installed at app level.
+Start by running `ns doctor` from the `apps/nativescript-theinterview` directory to see which pieces of your dev environment are missing to build for iOS or Android. If you run this command from root, you will be missing some packages that are only installed at the app level.
