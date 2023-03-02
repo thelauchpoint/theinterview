@@ -8,18 +8,7 @@ import { Schema } from 'mongoose';
  * we provide 1 array as an example - the books_rented array and
  * we provide 1 nested array - the authors array inside the books_rented array.
  */
-export const BackendSchema = new Schema({});
-
-/**
- * THIS IS THE EXAMPLE SCHEMA PROVIDED. DO NOT USE THIS SCHEMA TO ACCOMPLISH ANY LOGIC IN THE SERVICE.
- *
- * An example schema representing a collection of rented books.
- * Each document in the schema represents a single day that books were rented,
- * along with information about the books that were rented.
- *
- * This example schema will be small, the schema you make can be bigger.
- */
-const BookRentalSchema = new Schema({
+export const BackendSchema = new Schema({
   date_rented: { Type: Date, required: true },
 
   /**
@@ -43,4 +32,17 @@ const BookRentalSchema = new Schema({
       ],
     },
   ],
+});
+
+/**
+ * THIS IS THE EXAMPLE SCHEMA PROVIDED. DO NOT USE THIS SCHEMA TO ACCOMPLISH ANY LOGIC IN THE SERVICE.
+ *
+ * An example schema representing a collection of rented books.
+ * Each document in the schema represents a single day that books were rented,
+ * along with information about the books that were rented.
+ *
+ * This example schema will be small, the schema you make can be bigger.
+ */
+export const BookRentalSchema = new Schema({
+  ...BackendSchema,
 });

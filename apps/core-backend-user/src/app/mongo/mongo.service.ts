@@ -1,13 +1,14 @@
 import { Injectable, Logger } from '@nestjs/common';
+import { MongoBaseService } from './mongo-base.service';
 
 @Injectable()
-export class MongoService {
+export class MongoService extends MongoBaseService {
   /**
    * Logger provided to help with debug
    */
   private logger = new Logger(MongoService.name);
 
-  // TODO: Inject needed models through constructor
+  // TODO: Inject needed models through constructor (don't forget to import)
 
   /**
    * Takes in required (and possibly optional) data and uses it to create a new
