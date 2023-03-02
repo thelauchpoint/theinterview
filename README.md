@@ -23,8 +23,8 @@ Run `npm run start:core` for a dev api server.
 ## NativeScript App
 
 To build and run the nativescript app, you will need to follow the nativescript [environment setup](https://docs.nativescript.org/environment-setup.html)
-Run `nx run nativescript-theinterview:ios` for iOS simulator.
-Run `nx run nativescript-theinterview:android` for Android emulator.
+- Run `nx run nativescript-theinterview:ios` for iOS simulator.
+- Run `nx run nativescript-theinterview:android` for Android emulator.
 
 If running into issues:
 Start by running `ns doctor` from the `apps/nativescript-theinterview` directory to see which pieces of your dev environment are missing to build for iOS or Android. If you run this command from root, you will be missing some packages that are only installed at the app level.
