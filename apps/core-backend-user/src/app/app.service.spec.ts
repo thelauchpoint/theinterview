@@ -22,11 +22,12 @@ describe('AppService', () => {
     });
   });
   /**
-   * Modify this test to be accurate
+   * Modify this test to be useful once you complete the method
    */
   describe('createList', () => {
     it('should return a list', () => {
-      expect(service.createList(TRANSACTION_TEST_DATA)).toEqual([{ label: 'Policy Pol Eff Date Day', key: 'policy.pol_eff_date.day' }]); // Delete me and replace with your test.
+      const result = service.createList(TRANSACTION_TEST_DATA, ['_id', 'owner.account_id']);
+      expect(result[0]).toEqual({ label: 'Policy Pol Eff Date Day', key: 'policy.pol_eff_date.day' }); // Delete me and replace with your test.
     });
   });
 });
