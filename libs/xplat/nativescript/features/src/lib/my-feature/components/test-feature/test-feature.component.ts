@@ -103,7 +103,8 @@ export class TestFeatureComponent extends TestFeatureBaseComponent {
 
   // Objective: Take the policyData and display it in a NativeScript ListView
 
-  // The ListView only needs to display the label of the data in each item
-  // When an item is tapped in your list, it should console log the label string
-  // The ListView should be scrollable and should include all of the objects in the policyData array
+    // Your list only needs to display the label of the data in each item
+    // When an item is tapped in your list, it should console log the label string
+    // Your list should be scrollable and should include all of the objects in the policyData array
+    // Your list should work on both iOS and Android
 }

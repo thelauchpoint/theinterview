@@ -16,5 +16,5 @@ Start by running `ns doctor` from the this directory to see which pieces of your
 
 Navigate to libs/xplat/nativescript/features/src/lib/my-feature/components/test-feature/test-feature.component.ts
 
-- We are asking you to take an array of objects and display it in a NativeScript ListView
+- We are asking you to take an array of objects and display it in a NativeScript ListView, working on both iOS and Android.
 - EST TIME TO COMPLETE: 15min
