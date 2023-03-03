@@ -1,4 +1,4 @@
-import { createAction, props } from '@ngrx/store';
+import { createAction } from '@ngrx/store';
 import { IFeature } from '@theinterview/core-types';
 
 export const init = createAction('[@theinterview/feature] init');
