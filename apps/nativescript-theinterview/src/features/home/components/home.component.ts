@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
-import { setStatusBarColor } from '../../../utils';
+import { RouterExtensions } from '@nativescript/angular';
+
+import { BaseComponent } from '@theinterview/xplat/core';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-home',
-  templateUrl: './home.component.html'
+  selector: 'theinterview-home',
+  templateUrl: './home.component.html',
 })
-export class HomeComponent {
-
-  ngOnInit() {
-    setStatusBarColor('dark', '#97d9e9');
+export class HomeComponent extends BaseComponent {
+  constructor(private _routerExtensions: RouterExtensions) {
+    super();
+  }
+  goToFeature() {
+    this._routerExtensions.navigate(['/feature']);
   }
 }

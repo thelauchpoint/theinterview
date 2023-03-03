@@ -1,6 +1,5 @@
 import { Directive, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { BaseComponent } from '@theinterview/xplat/core';
 import { getFeature } from '../state';
 import { TestFeatureStateBaseComponent } from '../state/test-feature.state-base-component';
 

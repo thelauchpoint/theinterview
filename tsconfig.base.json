@@ -19,6 +19,9 @@
       "@theinterview/xplat/core": ["libs/xplat/core/src/index.ts"],
       "@theinterview/xplat/environments": ["libs/xplat/core/src/lib/environments/base/index.ts"],
       "@theinterview/xplat/features": ["libs/xplat/features/src/index.ts"],
+      "@theinterview/xplat/nativescript/core": ["libs/xplat/nativescript/core/src/index.ts"],
+      "@theinterview/xplat/nativescript/features": ["libs/xplat/nativescript/features/src/index.ts"],
+      "@theinterview/xplat/nativescript/utils": ["libs/xplat/nativescript/utils/src/index.ts"],
       "@theinterview/xplat/utils": ["libs/xplat/utils/src/index.ts"],
       "@theinterview/xplat/web/core": ["libs/xplat/web/core/src/index.ts"],
       "@theinterview/xplat/web/features": ["libs/xplat/web/features/src/index.ts"]

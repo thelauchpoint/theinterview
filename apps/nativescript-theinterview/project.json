@@ -1,8 +1,9 @@
 {
   "name": "nativescript-theinterview",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/nativescript-theinterview/src",
   "projectType": "application",
+  "sourceRoot": "apps/nativescript-theinterview/src",
+  "prefix": "theinterview",
   "targets": {
     "build": {
       "executor": "@nativescript/nx:build",
@@ -17,7 +18,7 @@
         "prod": {
           "fileReplacements": [
             {
-              "replace": "./src/environments/environment.ts",
+              "replace": "../../libs/xplat/core/src/lib/environments/environment.ts",
               "with": "./src/environments/environment.prod.ts"
             }
           ]
@@ -65,6 +66,15 @@
           "apps/nativescript-theinterview/**/*.ts",
           "apps/nativescript-theinterview/src/**/*.html"
         ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/nativescript-theinterview/jest.config.js",
+        "tsConfig": "apps/nativescript-theinterview/tsconfig.spec.json",
+        "passWithNoTests": true,
+        "setupFile": "apps/nativescript-theinterview/src/test-setup.ts"
       }
     }
   }

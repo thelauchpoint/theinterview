@@ -4,6 +4,6 @@
     "outDir": "../../dist/out-tsc",
     "types": []
   },
-  "include": ["./src/environments/environment.*.ts"],
+  "include": ["../../libs/xplat/core/src/lib/environments/base/*.ts", "./src/environments/environment.*.ts"],
   "files": ["./references.d.ts", "./src/main.ts", "./src/polyfills.ts"]
 }
