@@ -1,7 +1,7 @@
 import { Schema } from 'mongoose';
 
 /**
- * TODO: Define your own schema to give stucture to the data we plan on storing.
+ * TODO: Define your own schema to give structure to the data we plan on storing.
  * Example schema provided at the bottom.
  *
  * Make sure to include at least 1 array and at least 1 nested array. In the example at the bottom,
