@@ -10,6 +10,7 @@ import { FeatureEnitityState } from './interface/state.interface';
 export abstract class TestFeatureStateBaseComponent extends BaseComponent {
   error$: Observable<{ statusCode?: string; error: string; message: string } | null>;
   feature$: Observable<FeatureEnitityState | undefined>;
+  // featureLabels$: Observable<{ label: string; key: string }[]>;
 
   constructor(public _Store: Store) {
     super();
