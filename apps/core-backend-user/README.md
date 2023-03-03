@@ -30,7 +30,7 @@ Navigate to apps/core-backend-user/src/app/mongo/backend-schema.model.ts
 
 - We are asking you to create a schema of your choice that you will use to complete further questions.
 - Details about the requirements of the schema are in the file you will navigate to.
-- You'll need to add your schema as an import in 'mongoose.model.ts'
+- You'll need to add your schema as an import in 'mongoose.module.ts'
 
 - EST TIME TO COMPLETE: 10 min
 
