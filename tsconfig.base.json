@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@theinterview/core-types": ["libs/core-types/src/index.ts"],
       "@theinterview/xplat/core": ["libs/xplat/core/src/index.ts"],
       "@theinterview/xplat/environments": ["libs/xplat/core/src/lib/environments/base/index.ts"],
       "@theinterview/xplat/features": ["libs/xplat/features/src/index.ts"],
