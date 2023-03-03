@@ -1,4 +1,6 @@
-export const TRANSACTION_TEST_DATA = {
+import { IFeature } from '@theinterview/core-types';
+
+export const TRANSACTION_TEST_DATA: IFeature = {
   _id: '63abb2368467fa07f109d492',
   policy: {
     pol_eff_date: {
@@ -76,30 +78,7 @@ export const TRANSACTION_TEST_DATA = {
           error: { message: null, error: null },
           total_counted: 1,
           count: 1,
-          evaluation_factors: [
-            {
-              pass: false,
-              data: [
-                {
-                  custom_field: 'accident_at_fault',
-                  value: 0,
-                  final_value: 0,
-                  pass: false,
-                  junction: 'And',
-                  _id: '63abb2508467fa07f109d9e7',
-                },
-                {
-                  custom_field: 'minor_violations',
-                  value: 0,
-                  final_value: 0,
-                  pass: false,
-                  junction: null,
-                  _id: '63abb2508467fa07f109d9e8',
-                },
-              ],
-              _id: '63abb2508467fa07f109d9e6',
-            },
-          ],
+          evaluation_factors: [],
           actions: ['Adjust Rate'],
           _id: '63abb2508467fa07f109d9e5',
         },
@@ -122,16 +101,7 @@ export const TRANSACTION_TEST_DATA = {
           evaluation_factors: [
             {
               pass: false,
-              data: [
-                {
-                  custom_field: 'radius',
-                  value: 150,
-                  final_value: 150,
-                  pass: false,
-                  junction: null,
-                  _id: '63abb2508467fa07f109d9eb',
-                },
-              ],
+              data: [],
               _id: '63abb2508467fa07f109d9ea',
             },
           ],
@@ -140,9 +110,7 @@ export const TRANSACTION_TEST_DATA = {
         },
         {
           factor_title: ['Adjust Rate'],
-          rate_factors: [
-            { _id: '639253ec69184d4b2a4b6233', title: '# of employees > 0' },
-          ],
+          rate_factors: [{ _id: '639253ec69184d4b2a4b6233', title: '# of employees > 0' }],
           rate_type: 'Factor',
           rate: 1,
           rate_application: 'On Policy',
@@ -154,16 +122,7 @@ export const TRANSACTION_TEST_DATA = {
           evaluation_factors: [
             {
               pass: false,
-              data: [
-                {
-                  custom_field: 'number_of_employees',
-                  value: 45,
-                  final_value: 45,
-                  pass: false,
-                  junction: null,
-                  _id: '63abb2508467fa07f109d9ee',
-                },
-              ],
+              data: [],
               _id: '63abb2508467fa07f109d9ed',
             },
           ],
@@ -189,16 +148,7 @@ export const TRANSACTION_TEST_DATA = {
           evaluation_factors: [
             {
               pass: false,
-              data: [
-                {
-                  custom_field: 'speed_gauge_dot_score',
-                  value: 650,
-                  final_value: 650,
-                  pass: false,
-                  junction: null,
-                  _id: '63abb2508467fa07f109d9f1',
-                },
-              ],
+              data: [],
               _id: '63abb2508467fa07f109d9f0',
             },
           ],
@@ -403,9 +353,7 @@ export const TRANSACTION_TEST_DATA = {
       code: '83634',
       country: 'US',
     },
-    filings: [
-      { authority: 'Federal', number: null, _id: '63abb2368467fa07f109d495' },
-    ],
+    filings: [{ authority: 'Federal', number: null, _id: '63abb2368467fa07f109d495' }],
     documents: null,
     additional_insureds: [],
     data: { speed_gauge_dot_score: 650 },

@@ -1,4 +1,5 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
+import { IFeature } from '@theinterview/core-types';
 import { TRANSACTION_TEST_DATA } from './data/transactions';
 type ObjectWithAnyProperties = { [key: string]: any };
 @Injectable()
@@ -9,8 +10,12 @@ export class AppService {
    * Init service
    * @returns
    */
-  getData(): { message: string } {
-    return { message: 'Welcome to core-backend-user!' };
+  async getData(): Promise<IFeature> {
+    try {
+      return this.data;
+    } catch (error) {
+      throw new BadRequestException('Error');
+    }
   }
 
   /**
@@ -39,7 +44,7 @@ export class AppService {
    * you can also use `nx test core-backend-user` to test the entire app
    */
 
-  createList(input: Record<string, unknown>, skipKeys: string[] = []): { label: string; key: string }[] {
+  createList(input: ObjectWithAnyProperties, skipKeys: string[] = []): { label: string; key: string }[] {
     // The input object is null or undefined: the function will return an empty array.
     // The input object is an empty object: the function will return an empty array.
     // The input object contains keys that should be skipped: the function will not add these keys to the result list.
