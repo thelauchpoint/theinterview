@@ -1,5 +1,22 @@
-<StackLayout>
-  <Label text="Home" textWrap="true"></Label>
+<StackLayout style="margin-left: 5%; margin-right: 5%">
+  <Label
+    text="Welcome To The Launchpoint Code Interview 👋"
+    textWrap="true"
+    horizontalAlignment="center"
+    style="text-align: center; margin-top: 5%; margin-bottom: 10%; font-size: 24px"
+  ></Label>
 
-  <Button text="Navigate to Feature" (tap)="goToFeature()"></Button>
+  <Label
+    text="Looks like you are up and running with NativeScript, nice work!"
+    textWrap="true"
+    horizontalAlignment="center"
+    style="text-align: center; margin-bottom: 10%"
+  ></Label>
+
+  <Button
+    text="What's next?"
+    (tap)="goToFeature()"
+    verticalAlignment="center"
+    style="color: black; background-color: rgba(255, 110, 7, 0.675); border-radius: 50%; height: 7%"
+  ></Button>
 </StackLayout>

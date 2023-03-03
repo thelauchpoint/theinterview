@@ -1,9 +1,9 @@
-import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { Routes } from '@angular/router';
 import { NativeScriptRouterModule } from '@nativescript/angular';
 
 import { SharedModule } from '../shared/shared.module';
-import { HOME_COMPONENTS, HomeComponent } from './components';
+import { HomeComponent, HOME_COMPONENTS } from './components';
 
 export const routes: Routes = [
   {
