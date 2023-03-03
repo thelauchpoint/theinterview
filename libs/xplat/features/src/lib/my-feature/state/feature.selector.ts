@@ -43,7 +43,7 @@ export const selectSelectedFeature = createSelector(
  * The goal is to create a new object per value FOR example if you look at the TRANSACTION_TEST_DATA.
  * You can see the nested value policy.pol_eff_date.day = 29
  *
- * You mission is to create a new object for that value shaped like this.
+ * Your mission is to create a new object for that value shaped like this.
  * {label: Policy Pol Eff Date Day, key: policy.pol_eff_date.day }
  * You will do this for every value. The final example of the EXPECTED OUTCOME is in ./data/transactions-answer-data.json
  *
