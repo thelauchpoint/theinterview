@@ -16,5 +16,5 @@ Start by running `ns doctor` from the this directory to see which pieces of your
 
 Navigate to libs/xplat/nativescript/features/src/lib/my-feature/components/test-feature/test-feature.component.ts
 
-- We are asking you to take data from the selector and display it in a NativeScript ListView
+- We are asking you to take data and display it in a NativeScript ListView
 - EST TIME TO COMPLETE: 15min
