@@ -48,7 +48,7 @@ export const selectSelectedFeature = createSelector(
  * You will do this for every value. The final example of the EXPECTED OUTCOME is in ./data/transactions-answer-data.json
  *
  * EST TIME TO COMPLETE: 15min
- * We sovled this in less than 60 lines
+ * We solved this in less than 60 lines
  *
  */
 
