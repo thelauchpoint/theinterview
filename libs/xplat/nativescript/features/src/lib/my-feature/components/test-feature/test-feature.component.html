@@ -1,4 +1,8 @@
 <StackLayout>
   <Label text="Welcome!" textWrap="true"></Label>
   <!-- libs/xplat/features/src/lib/my-feature/state/data/transactions-answer-data.json -->
+  <div *ngIf="feature$ | async as feature">
+    <!-- {{ feature | json }} -->
+    <Label text="State is coming through!" textWrap="true"></Label>
+  </div>
 </StackLayout>
