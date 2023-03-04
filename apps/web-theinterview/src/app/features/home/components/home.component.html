@@ -31,10 +31,28 @@
     </div>
 
     <!--  MIDDLE CONTENT  -->
-    <div id="middle-content">
+    <div id="content">
       <h2>What to do</h2>
-      <a [routerLink]="['/feature']" routerLinkActive="router-link-active"> What&apos;s next? </a>
+      <ol>
+        Change the selector to ____
+        update the ____ selector to take the data and show key values like xxx
+        pass in the information to the component
+        on output make the selected item do soemthing.
+      </ol>
+  
+2. create a component
+3 add a component to feature page
+4. do the imports
+5. set up input output
 
+<li>Your work will be done on  <a [routerLink]="['/feature']" routerLinkActive="router-link-active">this page</a></li>
+
+<b>What you need to accomplish</b>
+
+update the selectSelectedFeatureLabels selector to return the data as outlined
+change the selector to selectSelectedFeatureLabels
+Loop through the infromation returned from new selector and send each object to the LabelKeyCardComponent
+on click of a card have the selected card is text updateds
       <!-- <div id="learning-materials" class="rounded shadow">
         <h2>Learning materials</h2>
         <a href="https://nx.dev/getting-started/intro?utm_source=nx-project" target="_blank" rel="noreferrer" class="list-item-link">
