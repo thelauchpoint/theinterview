@@ -14,6 +14,10 @@ Follow the instructions to get MongoDB running locally.
 
 Run `npm run start:core` for a dev api server.
 
+# Objectives
+
+More detailed information is in the code comments for your tasks. Objectives are in order of importance.
+
 ## Number 1
 
 Navigate to apps/core-backend-user/src/app/app.service.ts

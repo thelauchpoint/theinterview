@@ -2,6 +2,10 @@
 
 So you think you a ready to work on some nativescript code, lets see what you got!
 
+# Objectives
+
+More detailed information is in the code comments for your tasks. This objective is a continuation of the web/angular ones. Please complete those first.
+
 ## Number 1
 
 - We are asking you to take an array of objects and display them in a NativeScript ListView, working on both iOS and Android.
