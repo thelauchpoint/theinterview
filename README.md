@@ -29,13 +29,6 @@ To build and run the nativescript app, you will need to follow the nativescript 
 If running into issues:
 Start by running `ns doctor` from the `apps/nativescript-theinterview` directory to see which pieces of your dev environment are missing to build for iOS or Android. If you run this command from root, you will be missing some packages that are only installed at the app level.
 
-
-## Front End Tasks
-- your work should display on http://localhost:4220/feature when all done.
-
-**tasks to accomplish**
-1. Update selectSelectedFeatureLabels selector to return the data as outlined
-2. Change the selector in the TestFeatureComponent to use the new selectSelectedFeatureLabels
-3. update the html of TestFeatureComponent to Loop through the infromation returned from new selector and input each object to the LabelKeyCardComponent
-4. on click of the card have LebelKeyCard Component update TestFeatureComponent (via output) to print the right label selected
-5. UPDATE THIS is written in comments on lines to help you figure out what to do, and requests to typeset.
+Nativescript Tasks are outlined on the readme at `apps/nativescript-theinterview/README.md`
+Backend Tasks are outlined on the readme at `apps/web-theinterview/README.md`
+Frontend Tasks are outlined on the readme at `apps/core-backend-user/README.md`
