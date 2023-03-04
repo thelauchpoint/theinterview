@@ -8,8 +8,8 @@ import { Schema } from 'mongoose';
  * we provide 1 array as an example - the books_rented array and
  * we provide 1 nested array - the authors array inside the books_rented array.
  */
-export const BackendSchema = new Schema({
-  date_rented: { Type: Date, required: true },
+export const BackendSchema = {
+  date_rented: { type: Date, required: true },
 
   /**
    * This is the list of all books rented on the date represented by the date_rented property.
@@ -19,20 +19,20 @@ export const BackendSchema = new Schema({
       /**
        * Title of the book
        */
-      title: { Type: String, required: true },
+      title: { type: String, required: true },
 
       /**
        * The listed of authors for this book
        */
       authors: [
         {
-          first_name: { Type: String },
-          last_name: { Type: String },
+          first_name: { type: String },
+          last_name: { type: String },
         },
       ],
     },
   ],
-});
+};
 
 /**
  * THIS IS THE EXAMPLE SCHEMA PROVIDED. DO NOT USE THIS SCHEMA TO ACCOMPLISH ANY LOGIC IN THE SERVICE.

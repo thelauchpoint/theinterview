@@ -2,6 +2,14 @@
 
 So you think you a ready to work on some server code, lets see what you got!
 
+# Connecting to the Database
+
+You'll need to run MongoDB locally to complete some of the tasks below.
+Mac install using brew: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/#install-mongodb-community-edition-on-macos
+Windows install: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/
+
+Follow the instructions to get MongoDB running locally.
+
 ## Development server
 
 Run `npm run start:core` for a dev api server.
@@ -22,6 +30,7 @@ Navigate to apps/core-backend-user/src/app/mongo/backend-schema.model.ts
 
 - We are asking you to create a schema of your choice that you will use to complete further questions.
 - Details about the requirements of the schema are in the file you will navigate to.
+- You'll need to add your schema as an import in 'mongoose.module.ts'
 
 - EST TIME TO COMPLETE: 10 min
 
