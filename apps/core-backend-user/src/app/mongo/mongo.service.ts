@@ -28,12 +28,12 @@ export class MongoService extends MongoBaseService {
    * TIPS
    * Remember which properties you set as required in the schema
    */
-  async createNewDocumemnt(data: Record<string, unknown>) {
+  async createNewDocument(data: Record<string, unknown>) {
     // TODO: Implement
   }
 
   /**
-   * Takes in updaed data and uses it to update a
+   * Takes in updated data and uses it to update a
    * document in the MongoDB collection that matches up with the schema created from the 'backend-schema.model' file
    * @param data The data we want updated in the database.
    *
@@ -41,7 +41,7 @@ export class MongoService extends MongoBaseService {
    * The goal here is to update certain properties of a single document in the collection you defined.
    * You should only need to use a single call to the update method from mongoose.
    */
-  async updateDocumemnt(data: Record<string, unknown>) {
+  async updateDocument(data: Record<string, unknown>) {
     // TODO: Implement
   }
 

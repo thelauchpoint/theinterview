@@ -22,7 +22,10 @@ Run `npm run start:core` for a dev api server.
 
 ## NativeScript App
 
+NativeScript Objective located in `app1s/nativescript-theinterview/README.md`
+### Build and Run nativescript
 To build and run the nativescript app, you will need to follow the nativescript [environment setup](https://docs.nativescript.org/environment-setup.html)
+
 - Run `nx run nativescript-theinterview:ios` for iOS simulator.
 - Run `nx run nativescript-theinterview:android` for Android emulator.
 

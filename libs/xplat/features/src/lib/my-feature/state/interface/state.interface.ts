@@ -1,5 +1,5 @@
 import { IFeature } from '@theinterview/core-types';
 
-export interface FeatureEnitityState extends IFeature {
+export interface FeatureEntityState extends IFeature {
   _id: string;
 }

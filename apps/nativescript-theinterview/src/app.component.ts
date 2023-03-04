@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { AppService } from '@theinterview/xplat/nativescript/core';
+import { AppBaseComponent } from '@theinterview/xplat/nativescript/features';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+  selector: 'theinterview-root',
+  templateUrl: 'app.component.html',
 })
-export class AppComponent {
-
+export class AppComponent extends AppBaseComponent {
+  constructor(appService: AppService) {
+    super(appService);
+  }
 }

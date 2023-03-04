@@ -58,8 +58,8 @@ Navigate to apps/core-backend-user/src/app/mongo/mongo.service.ts
 
 - We are asking you to write the following functions
 
-  - createNewDocumemnt()
-  - updateDocumemnt()
+  - createNewDocument()
+  - updateDocument()
   - addToArray()
   - updateItemInArray()
   - addToNestedArray()

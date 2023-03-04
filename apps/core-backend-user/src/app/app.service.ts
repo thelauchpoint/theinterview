@@ -34,13 +34,13 @@ export class AppService {
    * You will do this for every value. The final example of the EXPECTED OUTCOME is in ./data/transactions-answer-data.json
    *
    * EST TIME TO COMPLETE: 15min
-   * We sovled this in less than 60 lines
+   * We solved this in less than 60 lines
    * You can run the server to test on re-compile or use the test.
    * Make sure either way the test passes and is useful.
    *
    * BONUS TIPS
    * Use this test to develop your method apps/core-backend-user/src/app/app.service.spec.ts
-   * Using VS extention Jest Runner or another of our choice to help will make this easy by isolating the test and you can watch it also.
+   * Using VS extension Jest Runner or another of our choice to help will make this easy by isolating the test and you can watch it also.
    * you can also use `nx test core-backend-user` to test the entire app
    */
 
