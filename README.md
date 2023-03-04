@@ -31,4 +31,4 @@ Start by running `ns doctor` from the `apps/nativescript-theinterview` directory
 
 Nativescript Tasks are outlined on the readme at `apps/nativescript-theinterview/README.md`
 Backend Tasks are outlined on the readme at `apps/web-theinterview/README.md`
-Frontend Tasks are outlined on the readme at `apps/core-backend-user/README.md`
+Frontend Tasks are outlined on the [readme](apps/core-backend-user/README.md) at `apps/core-backend-user/README.md`
