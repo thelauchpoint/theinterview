@@ -30,5 +30,7 @@ If running into issues:
 Start by running `ns doctor` from the `apps/nativescript-theinterview` directory to see which pieces of your dev environment are missing to build for iOS or Android. If you run this command from root, you will be missing some packages that are only installed at the app level.
 
 Nativescript Tasks are outlined on the readme at `apps/nativescript-theinterview/README.md`
+
 Backend Tasks are outlined on the readme at `apps/web-theinterview/README.md`
+
 Frontend Tasks are outlined on the [readme](apps/core-backend-user/README.md) at `apps/core-backend-user/README.md`
