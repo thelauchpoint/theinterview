@@ -67,7 +67,8 @@ export const selectSelectedFeatureLabels = createSelector(
 
     // This is a starting point
     function getSelectableKeys(input: ObjectWithAnyProperties, skipKeys: string[] = []): { label: string; key: string }[] {
-      return [{ label: 'Policy Pol Eff Date Day', key: 'policy.pol_eff_date.day' }];
+      return [{ "label": "Policy Pol Eff Date Day", "key": "policy.pol_eff_date.day" },
+      { "label": "Policy Pol Eff Date Month", "key": "policy.pol_eff_date.month" },];
     }
     if (feature) {
       return getSelectableKeys(feature, ['transactions.object_id', 'dot.documents']);
