@@ -7,6 +7,13 @@ import { TestFeatureBaseComponent } from '@theinterview/xplat/features';
   templateUrl: 'test-feature.component.html',
 })
 export class TestFeatureComponent extends TestFeatureBaseComponent {
+  // Objective: Take the policyData array and display it in a NativeScript ListView.
+
+  // Your list only needs to display the label of each object in the array.
+  // When an item is tapped in your list, it should console log the label string.
+  // Your list should be scrollable and should include all of the objects in the policyData array.
+  // Your list should work well on both iOS and Android.
+
   policyData = [
     { label: 'Policy Pol Eff Date Day', key: 'policy.pol_eff_date.day' },
     { label: 'Policy Pol Eff Date Month', key: 'policy.pol_eff_date.month' },
@@ -100,11 +107,4 @@ export class TestFeatureComponent extends TestFeatureBaseComponent {
   constructor(_Store: Store) {
     super(_Store);
   }
-
-  // Objective: Take the policyData and display it in a NativeScript ListView
-
-    // Your list only needs to display the label of the data in each item
-    // When an item is tapped in your list, it should console log the label string
-    // Your list should be scrollable and should include all of the objects in the policyData array
-    // Your list should work on both iOS and Android
 }
