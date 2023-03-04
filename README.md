@@ -31,7 +31,7 @@ Start by running `ns doctor` from the `apps/nativescript-theinterview` directory
 
 
 ## Front End Tasks
-- your work should display on http://localhost:4220/ when all done.
+- your work should display on http://localhost:4220/feature when all done.
 
 **tasks to accomplish**
 1. Update selectSelectedFeatureLabels selector to return the data as outlined
