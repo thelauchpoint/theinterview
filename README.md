@@ -28,7 +28,7 @@ Backend Tasks are outlined on the readme at `apps/core-backend-user/README.md`
 
 ### Front End Nativescript and Angular Specialist Objectives
 
-Frontend Tasks are outlined on the [readme](apps/core-backend-user/README.md) at `apps/web-theinterview/README.md`
+Frontend Tasks are outlined on the [readme](apps/web-theinterview/README.md) at `apps/web-theinterview/README.md`
 
 Nativescript Tasks are outlined on the readme at `apps/nativescript-theinterview/README.md`
 
