@@ -24,11 +24,11 @@ If it is taking you longer do not be discouraged:
 
 ### Backend Node, Nest.js and Mongodb Specialist Objectives
 
-Backend Tasks are outlined on the readme at `apps/web-theinterview/README.md`
+Backend Tasks are outlined on the readme at `apps/core-backend-user/README.md`
 
 ### Front End Nativescript and Angular Specialist Objectives
 
-Frontend Tasks are outlined on the [readme](apps/core-backend-user/README.md) at `apps/core-backend-user/README.md`
+Frontend Tasks are outlined on the [readme](apps/core-backend-user/README.md) at `apps/web-theinterview/README.md`
 
 Nativescript Tasks are outlined on the readme at `apps/nativescript-theinterview/README.md`
 
