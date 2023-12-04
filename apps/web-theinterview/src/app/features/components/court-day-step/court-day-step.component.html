@@ -1,8 +1,19 @@
 <div class="d-flex justify-content-between scroll-overflow mb-4">
-  <button class="btn btn-sm btn-secondary me-2" *ngFor="let item of intervals; let i = index" (click)="daySelected(i)">
+  <button class="btn btn-sm btn-secondary me-2" *ngFor="let item of inputs; let i = index" (click)="daySelected(item)">
+  <!-- <button class="btn btn-sm btn-secondary me-2" *ngFor="let item of inputs; let i = index" (click)="daySelected(item, i)"> -->
     <h4>Day</h4>
     <div class="white-circle">
-      {{ i + 1 }}
+      <!-- immediately shows the 'days' value -->
+      {{ days}} 
+
     </div>
   </button>
 </div>
+
+
+
+<!--
+  -  does the number need to change when it's clicked or should it already be populated? I think it should be populated 
+  - needs to show how many are in the array as how many are viewable 
+
+-->
