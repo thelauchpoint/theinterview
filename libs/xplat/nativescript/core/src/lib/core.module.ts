@@ -3,7 +3,8 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 // nativescript
 import { NativeScriptModule, NativeScriptHttpClientModule } from '@nativescript/angular';
 import { Device } from '@nativescript/core';
-import { TNSFontIconModule, USE_STORE } from 'nativescript-ngx-fonticon';
+import { FontIconModule, USE_STORE } from 'nativescript-fonticon/angular';
+
 import { fontAwesomeIcons } from '@theinterview/xplat/nativescript/utils';
 
 // libs
@@ -28,22 +29,22 @@ export function createTranslateLoader() {
   imports: [
     NativeScriptModule,
     NativeScriptHttpClientModule,
-    TNSFontIconModule.forRoot({}),
+    FontIconModule.forRoot({}),
     CoreModule.forRoot([
       {
         provide: PlatformLanguageToken,
-        useFactory: platformLangFactory
+        useFactory: platformLangFactory,
       },
       {
         provide: PlatformWindowToken,
-        useClass: MobileWindowService
-      }
+        useClass: MobileWindowService,
+      },
     ]),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: createTranslateLoader
-      }
+        useFactory: createTranslateLoader,
+      },
     }),
   ],
   providers: [
@@ -51,10 +52,10 @@ export function createTranslateLoader() {
       // inline icons to avoid extra file handling on app boot
       provide: USE_STORE,
       useValue: {
-        fa: fontAwesomeIcons
+        fa: fontAwesomeIcons,
       },
     },
-  ]
+  ],
 })
 export class TheinterviewCoreModule {
   constructor(
