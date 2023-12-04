@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
-import { ComponentsComponent } from './components.component';
 import { TestCardComponent } from './card';
+import { ComponentsComponent } from './components.component';
+import { CourtDayStepComponent } from './court-day-step/court-day-step.component';
 import { DayStepComponent } from './day-step/day-step.component';
 
-const STANDALONE_COMPONENTS = [TestCardComponent, DayStepComponent];
+const STANDALONE_COMPONENTS = [TestCardComponent, DayStepComponent, CourtDayStepComponent];
 
 export const routes: Routes = [
   {

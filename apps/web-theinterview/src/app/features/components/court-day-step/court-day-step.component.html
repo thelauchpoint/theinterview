@@ -1,0 +1,8 @@
+<div class="d-flex justify-content-between scroll-overflow mb-4">
+  <button class="btn btn-sm btn-secondary me-2" *ngFor="let item of intervals; let i = index" (click)="daySelected(i)">
+    <h4>Day</h4>
+    <div class="white-circle">
+      {{ i + 1 }}
+    </div>
+  </button>
+</div>
