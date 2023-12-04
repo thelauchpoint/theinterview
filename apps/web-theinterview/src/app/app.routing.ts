@@ -8,7 +8,7 @@ import { SharedModule } from './features/shared/shared.module';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/components',
     pathMatch: 'full',
   },
   {
@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'feature',
     loadChildren: () => import('./features/my-feature/my-feature.module').then((m) => m.FeatureModule),
+  },
+  {
+    path: 'components',
+    loadChildren: () => import('./features/components/components.module').then((m) => m.ComponentsModule),
   },
 ];
 

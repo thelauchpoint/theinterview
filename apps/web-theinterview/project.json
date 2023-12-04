@@ -15,11 +15,8 @@
         "polyfills": "apps/web-theinterview/src/polyfills.ts",
         "tsConfig": "apps/web-theinterview/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/web-theinterview/src/favicon.ico",
-          "apps/web-theinterview/src/assets"
-        ],
-        "styles": ["apps/web-theinterview/src/styles.scss"],
+        "assets": ["apps/web-theinterview/src/favicon.ico", "apps/web-theinterview/src/assets"],
+        "styles": ["apps/web-theinterview/src/styles.scss", "libs/xplat/scss/src/style.scss"],
         "scripts": []
       },
       "configurations": {
@@ -78,17 +75,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/web-theinterview/**/*.ts",
-          "apps/web-theinterview/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/web-theinterview/**/*.ts", "apps/web-theinterview/**/*.html"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/web-theinterview"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/web-theinterview"],
       "options": {
         "jestConfig": "apps/web-theinterview/jest.config.ts",
         "passWithNoTests": true

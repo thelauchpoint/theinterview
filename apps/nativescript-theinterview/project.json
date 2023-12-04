@@ -60,16 +60,13 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/nativescript-theinterview/**/*.ts",
-          "apps/nativescript-theinterview/src/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/nativescript-theinterview/**/*.ts", "apps/nativescript-theinterview/src/**/*.html"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "options": {
         "jestConfig": "apps/nativescript-theinterview/jest.config.js",
         "tsConfig": "apps/nativescript-theinterview/tsconfig.spec.json",
