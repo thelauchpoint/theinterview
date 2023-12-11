@@ -13,10 +13,12 @@ export class DayStepComponent {
 
   @Output() intervalSelected: EventEmitter<{ index: number; interval_id: string }> = new EventEmitter<{ index: number; interval_id: string }>();
 
-  ngAfterViewInit(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-  }
+  // ngAfterViewInit(): void {
+  //   //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+  //   //Add 'implements AfterViewInit' to the class.
+  // }
 
-  daySelected(index: number) {}
+  daySelected(index: number) {
+    console.log('daySelected', index);
+  }
 }

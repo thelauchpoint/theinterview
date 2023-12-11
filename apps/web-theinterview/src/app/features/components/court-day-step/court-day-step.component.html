@@ -10,6 +10,13 @@
   </button>
 </div>
 
+
+<div *ngFor="let input of inputs">
+  <h3>{{ input.title }}</h3>
+  <p>Days: {{ input.days }}</p>
+  <button (click)="selectDay(input)">Select Day</button>
+</div>
+
 <!--
   -  does the number need to change when it's clicked or should it already be populated? I think it should be populated 
   - needs to show how many are in the array as how many are viewable 
@@ -25,5 +32,4 @@
 - the number is the 'days' value individual for each item in the array
 - when clicked, it needs to check if the item is disabled, if it is then it doesn't do anything, 
   if it's not disabled then it needs to show the 'days' value of that item in the array
-
 -->

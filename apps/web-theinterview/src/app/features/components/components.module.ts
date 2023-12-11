@@ -5,8 +5,9 @@ import { TestCardComponent } from './card';
 import { ComponentsComponent } from './components.component';
 import { CourtDayStepComponent } from './court-day-step/court-day-step.component';
 import { DayStepComponent } from './day-step/day-step.component';
+import { CourtV2Component } from './court-v2/court-v2.component';
 
-const STANDALONE_COMPONENTS = [TestCardComponent, DayStepComponent, CourtDayStepComponent];
+const STANDALONE_COMPONENTS = [TestCardComponent, DayStepComponent, CourtDayStepComponent, CourtV2Component];
 
 export const routes: Routes = [
   {
