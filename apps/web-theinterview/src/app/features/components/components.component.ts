@@ -22,7 +22,7 @@ export class ComponentsComponent extends BaseComponent {
         title: 'asdf',
         disabled: false,
         canProceed: true,
-        number_val: 6,
+        number_val: null,
       },
       {
         title: 'courtnesdghjy',
@@ -32,7 +32,7 @@ export class ComponentsComponent extends BaseComponent {
       },
       {
         title: 'couhdgjtyjtyrtney',
-        disabled: false,
+        disabled: true,
         canProceed: true,
         number_val: 8,
       },
@@ -61,3 +61,7 @@ export class ComponentsComponent extends BaseComponent {
     // Add your logic for handling the disabled state change
   }
 }
+
+
+
+// number value is null then show the index + 1 as the number value 

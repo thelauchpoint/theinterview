@@ -5,7 +5,7 @@ export interface CardInputs {
   title: string;
   disabled: boolean;
   canProceed: boolean;
-  number_val: number;
+  number_val?: number | null;
 }
 
 @Component({
@@ -22,7 +22,10 @@ export class CourtV2Component {
 
   @Input() loading!: boolean;
 
-  @ViewChild('cardContainer') cardContainer!: ElementRef;
+
+  @ViewChild('cardContainer') cardContainer!: ElementRef; // for left and right scroll
+
+  firstDisabledIndex: number | null = null;
 
   @Output() daySelected: EventEmitter<any> = new EventEmitter();
   @Output() disabledChanged: EventEmitter<boolean> = new EventEmitter();
@@ -32,24 +35,29 @@ export class CourtV2Component {
   ngOnInit() {
     console.log('data', this.data);
 
-    this.data.find((item) => console.log('item', item));
+    // this.data.find((item) => console.log('item', item));
 
     // find the first item in the array that has a value of false for canProceed
+    // current item should be the first item that you can see on the list.
     const currentItem = this.data.find((item) => !item.canProceed);
+
+    // find the first item in the array that is disabled and set all values after that to disabled on the html only
+
     console.log('currentItem', currentItem);
 
     if (currentItem) {
       console.log('if current item then emit', currentItem);
       this.daySelected.emit(currentItem);
       if (currentItem.disabled !== null) {
+        // this.setFirstDisabledIndex(currentItem);
+        this.firstDisabledIndex = this.data.indexOf(currentItem);
         console.log('if current item is disabled emit disabled', currentItem.disabled);
         this.disabledChanged.emit(currentItem.disabled);
       }
     }
 
-     // Scroll to the current item
-     this.scrollToCurrentItem(currentItem);
-
+    // Scroll to the current item
+    // this.scrollToCurrentItem(currentItem);
   }
 
   // Handle card click event
@@ -64,22 +72,31 @@ export class CourtV2Component {
     }
   }
 
-  private scrollToCurrentItem(currentItem: any) {
-    const cardContainer = this.cardContainer.nativeElement;
-    const cardIndex = this.data.indexOf(currentItem);
 
-    // Calculate the scroll position based on the card width and index
-    const scrollPosition = cardIndex * cardContainer.clientWidth;
+// if item in the list is disabled then all items after that should be disabled 
+  // private setFirstDisabledIndex(item: any) {
+  //   if (item.disabled === true) {
+  //     this.firstDisabledIndex = this.data.indexOf(item);
+  //   } else {
+  //     this.firstDisabledIndex = null;
+  //   }
+  // }
 
-    // Set the scroll position
-    this.renderer.setProperty(cardContainer, 'scrollLeft', scrollPosition);
-  }
+  // private scrollToCurrentItem(currentItem: any) {
+  //   const cardContainer = this.cardContainer.nativeElement;
+  //   const cardIndex = this.data.indexOf(currentItem);
 
+  //   // Calculate the scroll position based on the card width and index
+  //   const scrollPosition = cardIndex * cardContainer.clientWidth;
+
+  //   // Set the scroll position
+  //   this.renderer.setProperty(cardContainer, 'scrollLeft', scrollPosition);
+  // }
 }
 
 /**
  * @how it works
- * 1.one card that is looped through for each item in the array, if no 'number_value' value is set, use the index +1 as the value printed on the card, and the amount to show on the screen
+ * ✅ 1.one card that is looped through for each item in the array, if no 'number_value' value is set, use the index +1 as the value printed on the card, and the amount to show on the screen
    if a 'number_value' value is set, then use that value as the amount to show on the screen and the value printed on the card. 
    if the data looks like this: Would be index position +1 : {title: ‘Day’,completed: false,disabled: false,number_val?: null} Would be 91: {title: ‘Day’,completed: false,disabled: false,number_val: 91}
 
@@ -90,13 +107,14 @@ export class CourtV2Component {
 
  * 3. if the disabled value is set to true, then all cards would be disabled following the current item, if the disabled value is set to null, then all cards would be enabled following the current item
 
- * 4. use the canProceed boolean to show a dot on the card, if the canProceed is set to true, then show the dot, if it's set to false, then don't show the dot
+ * 4. ✅ use the canProceed boolean to show a dot on the card, if the canProceed is set to true, then show the dot, if it's set to false, then don't show the dot
+      - should maintain styling so if the dot isn't there then the card should be the same size as the other cards
 
- * if the canProceed is true and the card is clicked then they can proceed to the next step, if the canProceed is false and the card is clicked then they can't proceed to the next step
+ * ✅ if the canProceed is true and the card is clicked then they can proceed to the next step, if the canProceed is false and the card is clicked then they can't proceed to the next step
 
  * 5. emit the daySelected event when a card is clicked, if the card is disabled then emit the disabledChanged event
 
- * 6. the cards should have skeleton loading when the component is loading and when the data is loading
+ * 6. ✅ the cards should have skeleton loading when the component is loading and when the data is loading
  
  * 
  */

@@ -13,11 +13,11 @@
     </div>
   </div> -->
 
-  <div class="d-flex justify-content-between scroll-overflow mb-4">
+  <div class="d-flex justify-content-between scroll-overflow mb-4" #cardContainer>
     <button
       class="btn btn-sm btn-secondary me-2"
       *ngFor="let item of data; let i = index"
-      [ngClass]="{ disabled: item.disabled }"
+      [ngClass]="{ 'disabled': item.disabled || (firstDisabledIndex !== null && i > firstDisabledIndex) }" 
       (click)="onCardClick(item)"
     >
       <h4>Day</h4>
@@ -28,10 +28,16 @@
     </button>
   </div>
 </ng-template>
+
+
 <!-- todo: 
 find first item in list that is disabled, and disable all items after that
 current item the whole card should have a black background and white text
 the current item should be the first item in the list that is not disabled
+current item is the first item you see, and then you can scroll left or right
+set width of container to 100% of the screen
+
+
 
 
 
