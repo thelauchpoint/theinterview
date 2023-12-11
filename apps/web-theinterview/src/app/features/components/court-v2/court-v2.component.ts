@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 // // {title: ‘Day’,completed: false,disabled: false,number_val: 91}
 
@@ -18,7 +18,35 @@ export interface CardInputs {
   standalone: true,
   imports: [CommonModule],
 })
-export class CourtV2Component {}
+export class CourtV2Component {
+  @Input() data: Array<CardInputs> = [];
+ skeleton:  any[] = Array.from({ length: 10 });
+
+  @Input() loading!: boolean;
+  @Output() daySelected: EventEmitter<any> = new EventEmitter();
+  @Output() disabledChanged: EventEmitter<boolean> = new EventEmitter();
+
+  ngOnInit() {
+    // Find the current item and emit events accordingly
+    const currentItem = this.data.find((item) => !item.canProceed);
+    if (currentItem) {
+      this.daySelected.emit(currentItem);
+      if (currentItem.disabled !== null) {
+        this.disabledChanged.emit(currentItem.disabled);
+      }
+    }
+  }
+
+  // Handle card click event
+  onCardClick(item: any) {
+    if (item.disabled !== null) {
+      this.disabledChanged.emit(item.disabled);
+    } else {
+      this.daySelected.emit(item);
+    }
+  }
+}
+
 /**
  * @how it works
  * 1.one card that is looped through for each item in the array, if no 'number_value' value is set, use the index +1 as the value printed on the card, and the amount to show on the screen
@@ -41,9 +69,4 @@ export class CourtV2Component {}
  * 6. the cards should have skeleton loading when the component is loading and when the data is loading
  
  * 
- * /
-
-// how does it know what the current item should be?
-// it should start on either the index of 0 or start on the day that is passed in
-
-// do I need to map data so that if all other days in the array are completed then the current item is the first day that is not completed?
+ */

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BaseComponent } from '@theinterview/xplat/core';
-import { CardInputs } from './court-day-step/court-day-step.component';
+import { CardInputs } from './court-v2/court-v2.component';
 
 @Component({
   selector: 'theinterview-components',
@@ -16,38 +16,48 @@ export class ComponentsComponent extends BaseComponent {
         title: 'courtney',
         disabled: false,
         canProceed: true,
-        days: 36,
+        number_val: 36,
       },
       {
         title: 'asdf',
         disabled: false,
         canProceed: true,
-        days: 6,
+        number_val: 6,
       },
       {
         title: 'courtnesdghjy',
         disabled: false,
         canProceed: true,
-        days: 16,
+        number_val: 16,
       },
       {
         title: 'couhdgjtyjtyrtney',
         disabled: false,
         canProceed: true,
-        days: 8,
+        number_val: 8,
       },
       {
         title: 'courfghsfgtney',
         disabled: false,
         canProceed: true,
-        days: 4,
+        number_val: 4,
       },
       {
         title: 'cour2355tney',
         disabled: true,
         canProceed: true,
-        days: 0,
+        number_val: 0,
       },
     ];
+  }
+
+  handleDaySelected(selectedDay: any) {
+    console.log('Day selected:', selectedDay);
+    // Add your logic for handling the selected day
+  }
+
+  handleDisabledChanged(isDisabled: boolean) {
+    console.log('Disabled changed:', isDisabled);
+    // Add your logic for handling the disabled state change
   }
 }

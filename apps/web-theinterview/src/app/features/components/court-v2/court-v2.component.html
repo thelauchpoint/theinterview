@@ -1,0 +1,15 @@
+<!-- day-card.component.html -->
+<div *ngIf="loading; else content">
+  <!-- Skeleton loading -->
+  <div class="card skeleton-card" *ngFor="let item of skeleton"></div>
+</div>
+<ng-template #content>
+  <!-- Actual content -->
+  <div class="card" *ngFor="let item of data; let i = index" [ngClass]="{ 'disabled': item.disabled }">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.number_val || i + 1 }}</h5>
+      <p class="card-text">{{ item.title }}</p>
+      <span *ngIf="item.canProceed" class="dot"></span>
+    </div>
+  </div>
+</ng-template>

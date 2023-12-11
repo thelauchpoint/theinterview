@@ -3,12 +3,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 // // {title: ‘Day’,completed: false,disabled: false,number_val: 91}
 
-export interface CardInputs {
-  title: string;
-  disabled: boolean;
-  canProceed: boolean;
-  days: number;
-}
+// export interface CardInputs {
+//   title: string;
+//   disabled: boolean;
+//   canProceed: boolean;
+//   days: number;
+// }
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -19,24 +19,24 @@ export interface CardInputs {
   imports: [CommonModule],
 })
 export class CourtDayStepComponent {
-  @Input() inputs: Array<CardInputs> = [];
-  days: number | undefined;
-  initialDays: number | undefined;
-  @Output() disabledChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
-  @Output() daysSelected: EventEmitter<boolean> = new EventEmitter<boolean>();
+  // @Input() inputs: Array<CardInputs> = [];
+  // days: number | undefined;
+  // initialDays: number | undefined;
+  // @Output() disabledChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
+  // @Output() daysSelected: EventEmitter<boolean> = new EventEmitter<boolean>();
   // need to get the logic when the page loads not when it's clicked and I think that I already have it on init so lets try to pass it in
-  ngOnInit() {
-    console.log('cardInputs', this.inputs);
-    this.inputs.forEach((cardInput: CardInputs) => {
-      // Your logic here
-      // this.daySelected(cardInput, this.inputs.indexOf(cardInput));
-      console.log('inside for each', cardInput, this.inputs.indexOf(cardInput));
-    });
+  // ngOnInit() {
+  //   // console.log('cardInputs', this.inputs);
+  //   // this.inputs.forEach((cardInput: CardInputs) => {
+  //     // Your logic here
+  //     // this.daySelected(cardInput, this.inputs.indexOf(cardInput));
+  //     // console.log('inside for each', cardInput, this.inputs.indexOf(cardInput));
+  //   });
   }
   //   // logic for how many to show - if days = 36 then show 36, if days = null then use index + 1
   //   // if disabled is set to null then all would be enabled.
   //   // if disabled is set to true then all would be disabled.
-    daySelected(cardInputs: CardInputs, index: number) {
+    // daySelected(cardInputs: CardInputs, index: number) {
     //   // daySelected(cardInputs: CardInputs) {
     //   // would I just use the length here instead of the index?
     //   this.initialDays = this.inputs.length;
@@ -51,15 +51,15 @@ export class CourtDayStepComponent {
     //     console.log('if days are passed in', this.days);
     //     return this.days;
     //   }
-    }
-  selectDay(input: CardInputs) {
-    if (input.disabled) {
-      this.disabledChanged.emit(true);
-    } else {
-      this.daysSelected.emit(true);
-    }
-  }
-}
+    // }
+  // selectDay(input: CardInputs) {
+  //   if (input.disabled) {
+  //     this.disabledChanged.emit(true);
+  //   } else {
+  //     this.daysSelected.emit(true);
+  //   }
+  // }
+// }
 
 // // todo:
 // // inputs array object (1 item is 1 card) ✅
