@@ -27,7 +27,7 @@ export class ComponentsComponent extends BaseComponent {
       {
         title: 'courtnesdghjy',
         disabled: false,
-        canProceed: true,
+        canProceed: false,
         number_val: 16,
       },
       {

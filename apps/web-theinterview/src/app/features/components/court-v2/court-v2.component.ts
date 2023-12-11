@@ -1,7 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-
-// // {title: ‘Day’,completed: false,disabled: false,number_val: 91}
+import { Component, ElementRef, EventEmitter, Input, Output, Renderer2, ViewChild } from '@angular/core';
 
 export interface CardInputs {
   title: string;
@@ -20,31 +18,63 @@ export interface CardInputs {
 })
 export class CourtV2Component {
   @Input() data: Array<CardInputs> = [];
- skeleton:  any[] = Array.from({ length: 10 });
+  skeleton: any[] = Array.from({ length: 10 });
 
   @Input() loading!: boolean;
+
+  @ViewChild('cardContainer') cardContainer!: ElementRef;
+
   @Output() daySelected: EventEmitter<any> = new EventEmitter();
   @Output() disabledChanged: EventEmitter<boolean> = new EventEmitter();
 
+  constructor(private renderer: Renderer2) {}
+
   ngOnInit() {
-    // Find the current item and emit events accordingly
+    console.log('data', this.data);
+
+    this.data.find((item) => console.log('item', item));
+
+    // find the first item in the array that has a value of false for canProceed
     const currentItem = this.data.find((item) => !item.canProceed);
+    console.log('currentItem', currentItem);
+
     if (currentItem) {
+      console.log('if current item then emit', currentItem);
       this.daySelected.emit(currentItem);
       if (currentItem.disabled !== null) {
+        console.log('if current item is disabled emit disabled', currentItem.disabled);
         this.disabledChanged.emit(currentItem.disabled);
       }
     }
+
+     // Scroll to the current item
+     this.scrollToCurrentItem(currentItem);
+
   }
 
   // Handle card click event
   onCardClick(item: any) {
+    console.log('card clicked, item', item);
     if (item.disabled !== null) {
+      console.log('card clicked and item is disabled', item.disabled);
       this.disabledChanged.emit(item.disabled);
     } else {
+      console.log('card clicked and item is not disabled, emit item', item);
       this.daySelected.emit(item);
     }
   }
+
+  private scrollToCurrentItem(currentItem: any) {
+    const cardContainer = this.cardContainer.nativeElement;
+    const cardIndex = this.data.indexOf(currentItem);
+
+    // Calculate the scroll position based on the card width and index
+    const scrollPosition = cardIndex * cardContainer.clientWidth;
+
+    // Set the scroll position
+    this.renderer.setProperty(cardContainer, 'scrollLeft', scrollPosition);
+  }
+
 }
 
 /**
