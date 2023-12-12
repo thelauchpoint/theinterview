@@ -42,18 +42,18 @@ export class ComponentsComponent extends BaseComponent {
         canProceed: true,
         numberVal: 4,
       },
-      {
-        title: 'Day',
-        disabled: true,
-        canProceed: true,
-        numberVal: 0,
-      },
-      {
-        title: 'Day',
-        disabled: false,
-        canProceed: true,
-        numberVal: 16,
-      },
+      // {
+      //   title: 'Day',
+      //   disabled: true,
+      //   canProceed: true,
+      //   numberVal: 0,
+      // },
+      // {
+      //   title: 'Day',
+      //   disabled: false,
+      //   canProceed: true,
+      //   numberVal: 16,
+      // },
       // {
       //   title: 'Day',
       //   disabled: true,

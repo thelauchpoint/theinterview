@@ -6,7 +6,7 @@
 <ng-template #content>
   <div #cardContainer class="d-flex justify-content-start overflow-scroll mb-4">
     <button
-      class="btn btn-sm btn-secondary me-2"
+      class="btn btn-sm btn-secondary me-2 pb-2"
       *ngFor="let item of data; let i = index"
       [ngClass]="{
         disabled: item.disabled || (firstDisabledIndex !== null && i > firstDisabledIndex),
@@ -18,21 +18,21 @@
       <div class="white-circle" [ngClass]="{ 'text-dark': currentItem === item }">
         {{ item.numberVal || i + 1 }}
       </div>
-      <span *ngIf="item.canProceed" class="dot mt-3"></span>
-      <span *ngIf="!item.canProceed" class="dotplaceholder mt-3"></span>
+      <span *ngIf="item.canProceed" class="dot "></span>
+      <span *ngIf="!item.canProceed" class="dotplaceholder "></span>
     </button>
   </div>
 </ng-template>
 
-<!-- {{ currentItem | json }} -->
+{{ currentItem | json }}
 
 <!-- todo: 
-
-if the list is too short then the current item should still be first with nothing after it, it doesn't have to take up the whole width
-- edge case, what if there are items in the list that are completed, but disabled? current item shouldnt show as disabled even if it's set to disabled
-
+if the list is too short then the current item should still be first with nothing after it,
+ it doesn't have to take up the whole width
 -->
 
 <!--  EDGE CASES: 
-  -if the current item is disabled but it's the current item, should it be clickable and set to enabled? ( would this be on the client or here? )
+  -if the current item is disabled but it's the current item, should it be clickable and set to enabled? 
+  ( would this be on the client or here? )
  -->
+
