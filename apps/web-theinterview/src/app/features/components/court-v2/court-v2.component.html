@@ -21,8 +21,10 @@
   </div>
 </ng-template>
 
+{{ currentItem | json }}
+
 <!-- todo: 
 current item the whole card should have a black background and white text
 if the list is too short then the current item should still be first with nothing after it, it doesn't have to take up the whole width
-- edge case, what if there are items in the list that are completed, but disabled? 
+- edge case, what if there are items in the list that are completed, but disabled? current item shouldnt show as disabled even if it's set to disabled 
 -->
