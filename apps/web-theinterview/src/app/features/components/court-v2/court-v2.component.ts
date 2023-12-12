@@ -77,19 +77,35 @@ export class CourtV2Component {
     }
   }
 
+  // private scrollToCurrentItem(currentItem: any) {
+  //   console.log('get natvie element value', this.cardContainer.nativeElement);
+  //   const dis = this.cardContainer.nativeElement;
+  //   // console.log('card container', dis)
+  //   const cardIndex = this.data.indexOf(currentItem);
+
+  //   // Calculate the scroll position to place the current item at the beginning
+  //   const cardWidth = dis.querySelector('.div')?.clientWidth || 0;
+  //   console.log('card width', cardWidth);
+  //   const scrollPosition = cardIndex * cardWidth;
+
+  //   // Set the scroll position
+  //   dis.scrollLeft = scrollPosition;
+  // }
+
   private scrollToCurrentItem(currentItem: any) {
-    console.log('get natvie element value', this.cardContainer.nativeElement);
-    const dis = this.cardContainer.nativeElement;
-    // console.log('card container', dis)
+    const cardContainer = this.cardContainer.nativeElement;
     const cardIndex = this.data.indexOf(currentItem);
 
-    // Calculate the scroll position to place the current item at the beginning
-    const cardWidth = dis.querySelector('.card')?.clientWidth || 0;
+    // Calculate the scroll position to make the current item the first visible item
+    const cardWidth = cardContainer.querySelector('.btn')?.clientWidth || 0;
     const scrollPosition = cardIndex * cardWidth;
 
     // Set the scroll position
-    dis.scrollLeft = scrollPosition;
+    cardContainer.scrollLeft = scrollPosition;
   }
+
+
+
 }
 
 /**
@@ -98,7 +114,7 @@ export class CourtV2Component {
    if a 'number_value' value is set, then use that value as the amount to show on the screen and the value printed on the card. 
    if the data looks like this: Would be index position +1 : {title: ‘Day’,completed: false,disabled: false,number_val?: null} Would be 91: {title: ‘Day’,completed: false,disabled: false,number_val: 91}
 
- * 2.the starting position on the screen for the card is the current item, so if the current item is 5, then the card will start at 5 and show 5-36
+ * ✅ 2.the starting position on the screen for the card is the current item, so if the current item is 5, then the card will start at 5 and show 5-36
    current item is found by mapping data to find the first item in the array that has a false canProceed so that the current item is the first day that is has not been completed(canProceed) 
    if there are days before current item that have been completed then you should be able to horizontal scroll to those days, you should be able to horizontal scroll through all of the cards 
    
