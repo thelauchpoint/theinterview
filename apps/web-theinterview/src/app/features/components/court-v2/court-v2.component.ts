@@ -43,7 +43,7 @@ export class CourtV2Component implements OnInit, AfterViewInit {
 
   ngOnInit() {
     // find the first item in the array that has a value of false for canProceed, this is the current item.
-    // todo: and not disabled if they don't want to show disabled cards
+    // todo:?? and not disabled if they don't want to show disabled cards
     this.currentItem = this.data.find((item) => !item.canProceed);
 
     if (this.currentItem) {
@@ -70,6 +70,7 @@ export class CourtV2Component implements OnInit, AfterViewInit {
 
   // Handle card click event
   onCardClick(item: CardInputs) {
+    // todo:?? do we want to emit if it's disabled? or just not emit anything?
     // if item clicked is disabled then emit disabledChanged event
     // if (item.disabled === true) {
     //   console.log('card clicked and item is disabled', item.disabled);
