@@ -22,16 +22,16 @@ export class CourtV2Component {
 
   @Input() loading!: boolean;
 
-
   @ViewChild('cardContainer') cardContainer!: ElementRef; // for left and right scroll
 
   firstDisabledIndex: number | null = null;
-
+  currentItem: any;
   @Output() daySelected: EventEmitter<any> = new EventEmitter();
   @Output() disabledChanged: EventEmitter<boolean> = new EventEmitter();
 
   constructor(private renderer: Renderer2) {}
 
+  // oninit get current item
   ngOnInit() {
     console.log('data', this.data);
 
@@ -39,25 +39,30 @@ export class CourtV2Component {
 
     // find the first item in the array that has a value of false for canProceed
     // current item should be the first item that you can see on the list.
-    const currentItem = this.data.find((item) => !item.canProceed);
+    this.currentItem = this.data.find((item) => !item.canProceed);
 
     // find the first item in the array that is disabled and set all values after that to disabled on the html only
 
-    console.log('currentItem', currentItem);
+    console.log('currentItem', this.currentItem);
 
-    if (currentItem) {
-      console.log('if current item then emit', currentItem);
-      this.daySelected.emit(currentItem);
-      if (currentItem.disabled !== null) {
-        // this.setFirstDisabledIndex(currentItem);
-        this.firstDisabledIndex = this.data.indexOf(currentItem);
-        console.log('if current item is disabled emit disabled', currentItem.disabled);
-        this.disabledChanged.emit(currentItem.disabled);
+    if (this.currentItem) {
+      // console.log('if current item then emit', this.currentItem);
+      this.daySelected.emit(this.currentItem);
+      if (this.currentItem.disabled !== null) {
+        // if item in the list is disabled then all items after that should be disabled
+        this.firstDisabledIndex = this.data.indexOf(this.currentItem);
+        // console.log('if current item is disabled emit disabled', this.currentItem.disabled);
+        this.disabledChanged.emit(this.currentItem.disabled);
       }
     }
 
     // Scroll to the current item
     // this.scrollToCurrentItem(currentItem);
+  }
+
+  ngAfterViewInit() {
+    // Scroll to the current item
+    this.scrollToCurrentItem(this.currentItem);
   }
 
   // Handle card click event
@@ -72,26 +77,19 @@ export class CourtV2Component {
     }
   }
 
+  private scrollToCurrentItem(currentItem: any) {
+    console.log('get natvie element value', this.cardContainer.nativeElement);
+    const dis = this.cardContainer.nativeElement;
+    // console.log('card container', dis)
+    const cardIndex = this.data.indexOf(currentItem);
 
-// if item in the list is disabled then all items after that should be disabled 
-  // private setFirstDisabledIndex(item: any) {
-  //   if (item.disabled === true) {
-  //     this.firstDisabledIndex = this.data.indexOf(item);
-  //   } else {
-  //     this.firstDisabledIndex = null;
-  //   }
-  // }
+    // Calculate the scroll position to place the current item at the beginning
+    const cardWidth = dis.querySelector('.card')?.clientWidth || 0;
+    const scrollPosition = cardIndex * cardWidth;
 
-  // private scrollToCurrentItem(currentItem: any) {
-  //   const cardContainer = this.cardContainer.nativeElement;
-  //   const cardIndex = this.data.indexOf(currentItem);
-
-  //   // Calculate the scroll position based on the card width and index
-  //   const scrollPosition = cardIndex * cardContainer.clientWidth;
-
-  //   // Set the scroll position
-  //   this.renderer.setProperty(cardContainer, 'scrollLeft', scrollPosition);
-  // }
+    // Set the scroll position
+    dis.scrollLeft = scrollPosition;
+  }
 }
 
 /**
@@ -105,7 +103,7 @@ export class CourtV2Component {
    if there are days before current item that have been completed then you should be able to horizontal scroll to those days, you should be able to horizontal scroll through all of the cards 
    
 
- * 3. if the disabled value is set to true, then all cards would be disabled following the current item, if the disabled value is set to null, then all cards would be enabled following the current item
+ * 3. ✅ if the disabled value is set to true, then all cards would be disabled following the current item, if the disabled value is set to null, then all cards would be enabled following the current item
 
  * 4. ✅ use the canProceed boolean to show a dot on the card, if the canProceed is set to true, then show the dot, if it's set to false, then don't show the dot
       - should maintain styling so if the dot isn't there then the card should be the same size as the other cards

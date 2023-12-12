@@ -57,7 +57,7 @@ export class ComponentsComponent extends BaseComponent {
   }
 
   handleDisabledChanged(isDisabled: boolean) {
-    console.log('Disabled changed:', isDisabled);
+    // console.log('Disabled changed:', isDisabled);
     // Add your logic for handling the disabled state change
   }
 }
