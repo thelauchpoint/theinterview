@@ -1,11 +1,21 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 
 export interface CardInputs {
   title: string;
   disabled: boolean;
   canProceed: boolean;
-  number_val?: number | null;
+  numberVal?: number | null;
+}
+
+//todo:?? to configure the classes of the cards
+export interface CardConfigs {
+  classes: {
+    active: string;
+    disabled: string;
+    current: string;
+    text: string;
+  };
 }
 
 @Component({
@@ -17,6 +27,8 @@ export interface CardInputs {
   imports: [CommonModule],
 })
 export class CourtV2Component implements OnInit, AfterViewInit {
+  // button color, button text, disabled
+
   @ViewChild('cardContainer') cardContainer!: ElementRef; // for left and right scroll
 
   @Input() data: Array<CardInputs> = [];
@@ -29,10 +41,9 @@ export class CourtV2Component implements OnInit, AfterViewInit {
   @Output() daySelected: EventEmitter<any> = new EventEmitter();
   @Output() disabledChanged: EventEmitter<boolean> = new EventEmitter();
 
-  constructor(private renderer: Renderer2) {}
-
   ngOnInit() {
     // find the first item in the array that has a value of false for canProceed, this is the current item.
+    // todo: and not disabled if they don't want to show disabled cards
     this.currentItem = this.data.find((item) => !item.canProceed);
 
     if (this.currentItem) {
@@ -42,6 +53,15 @@ export class CourtV2Component implements OnInit, AfterViewInit {
       }
     }
   }
+
+  //  todo:?? set if's for the classes of the cards here based on config values
+  // setCardClasses(card: CardInputs, index: number) {
+  //   const config: CardConfigs = {
+  //     active: 'btn-primary',
+  //     disabled: 'btn-secondary',
+  //     current: 'btn-primary',
+  //     text: 'text-white',
+  //   };
 
   ngAfterViewInit() {
     // Scroll to the current item
@@ -56,7 +76,7 @@ export class CourtV2Component implements OnInit, AfterViewInit {
     //   this.disabledChanged.emit(item.disabled);
     // } else
     if (!item.disabled) {
-      console.log('card clicked and item is not disabled, emit item', item);
+      // console.log('card clicked and item is not disabled, emit item', item);
       this.daySelected.emit(item);
     }
   }
@@ -66,22 +86,17 @@ export class CourtV2Component implements OnInit, AfterViewInit {
     const cardContainer = this.cardContainer.nativeElement;
 
     const cardIndex = this.data.indexOf(currentItem);
-    // console.log('card index', cardIndex);
 
     // Calculate the scroll position to make the current item the first visible item
     const cardWidth = cardContainer.querySelector('.btn')?.clientWidth || 0;
-    // console.log('card width', cardWidth);
-    const scrollPosition = cardIndex * cardWidth;
 
-    // console.log('scroll position', scrollPosition);
+    const scrollPosition = cardIndex * cardWidth;
 
     // Set the scroll position
     cardContainer.scrollLeft = scrollPosition;
   }
 }
 // ok so the actual issue is that the items list is too short to appropriately scroll the the current item. what should happen instead is that the current item is always the first item in the list even if there are no items showing after it.
-
-
 
 /**
  * @how it works

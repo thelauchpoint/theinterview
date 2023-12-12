@@ -4,13 +4,7 @@
   padding: 4px;
 }
 
-.card-container {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  width: 100%; /* Ensure the container takes the full width */
-}
-
+// Skeleton
 .card {
   width: 200px;
   margin: 10px;
@@ -41,10 +35,11 @@
   display: inline-block;
 }
 
-.disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
+//  if you want it to be even lighter for disabled:
+// .disabled {
+//   opacity: 0.5;
+//   pointer-events: none;
+// }
 
 @keyframes skeleton-loading {
   0% {

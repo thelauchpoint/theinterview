@@ -4,19 +4,22 @@
 </div>
 <!-- Content -->
 <ng-template #content>
-  <div #cardContainer class="d-flex justify-content-between overflow-scroll mb-4">
+  <div #cardContainer class="d-flex justify-content-start overflow-scroll mb-4">
     <button
       class="btn btn-sm btn-secondary me-2"
       *ngFor="let item of data; let i = index"
-      [ngClass]="{ disabled: item.disabled || (firstDisabledIndex !== null && i > firstDisabledIndex) }"
+      [ngClass]="{
+        disabled: item.disabled || (firstDisabledIndex !== null && i > firstDisabledIndex),
+        'btn-dark text-light text-white': currentItem === item
+      }"
       (click)="onCardClick(item)"
     >
-      <h4>{{ item.title }}</h4>
-      <div class="white-circle">
-        {{ item.number_val || i + 1 }}
+      <h4 [ngClass]="{ 'text-light': currentItem === item }">{{ item.title }}</h4>
+      <div class="white-circle" [ngClass]="{ 'text-dark': currentItem === item }">
+        {{ item.numberVal || i + 1 }}
       </div>
-      <span *ngIf="item.canProceed" class="dot mt-2"></span>
-      <span *ngIf="!item.canProceed" class="dotplaceholder mt-2"></span>
+      <span *ngIf="item.canProceed" class="dot mt-3"></span>
+      <span *ngIf="!item.canProceed" class="dotplaceholder mt-3"></span>
     </button>
   </div>
 </ng-template>
@@ -24,7 +27,16 @@
 {{ currentItem | json }}
 
 <!-- todo: 
-current item the whole card should have a black background and white text
+
 if the list is too short then the current item should still be first with nothing after it, it doesn't have to take up the whole width
-- edge case, what if there are items in the list that are completed, but disabled? current item shouldnt show as disabled even if it's set to disabled 
+- edge case, what if there are items in the list that are completed, but disabled? current item shouldnt show as disabled even if it's set to disabled
+- if it's disabled but current item should it set item to be enabled? 
+-->
+
+<!--  EDGE CASES: 
+  -if the current item is disabled but it's the current item, should it be clickable and set to enabled? ( would this be on the client or here? )
+ -->
+
+<!-- Styling todo: 
+- smaller dot, center dot, lower dot 
 -->
