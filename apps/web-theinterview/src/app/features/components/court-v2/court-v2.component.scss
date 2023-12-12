@@ -10,7 +10,9 @@
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
+  width: 100%; /* Ensure the container takes the full width */
 }
+
 
 .card {
   width: 200px;

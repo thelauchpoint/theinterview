@@ -27,13 +27,85 @@ export class ComponentsComponent extends BaseComponent {
       {
         title: 'courtnesdghjy',
         disabled: false,
-        canProceed: false,
+        canProceed: true,
         number_val: 16,
       },
       {
         title: 'couhdgjtyjtyrtney',
         disabled: true,
+        canProceed: false,
+        number_val: 8,
+      },
+      {
+        title: 'courfghsfgtney',
+        disabled: false,
         canProceed: true,
+        number_val: 4,
+      },
+      {
+        title: 'cour2355tney',
+        disabled: true,
+        canProceed: true,
+        number_val: 0,
+      },
+      {
+        title: 'courtnesdghjy',
+        disabled: false,
+        canProceed: true,
+        number_val: 16,
+      },
+      {
+        title: 'couhdgjtyjtyrtney',
+        disabled: true,
+        canProceed: false,
+        number_val: 8,
+      },
+      {
+        title: 'courfghsfgtney',
+        disabled: false,
+        canProceed: true,
+        number_val: 4,
+      },
+      {
+        title: 'cour2355tney',
+        disabled: true,
+        canProceed: true,
+        number_val: 0,
+      },
+      {
+        title: 'courtnesdghjy',
+        disabled: false,
+        canProceed: true,
+        number_val: 16,
+      },
+      {
+        title: 'couhdgjtyjtyrtney',
+        disabled: true,
+        canProceed: false,
+        number_val: 8,
+      },
+      {
+        title: 'courfghsfgtney',
+        disabled: false,
+        canProceed: true,
+        number_val: 4,
+      },
+      {
+        title: 'cour2355tney',
+        disabled: true,
+        canProceed: true,
+        number_val: 0,
+      },
+      {
+        title: 'courtnesdghjy',
+        disabled: false,
+        canProceed: true,
+        number_val: 16,
+      },
+      {
+        title: 'couhdgjtyjtyrtney',
+        disabled: true,
+        canProceed: false,
         number_val: 8,
       },
       {
@@ -64,4 +136,4 @@ export class ComponentsComponent extends BaseComponent {
 
 
 
-// number value is null then show the index + 1 as the number value 
+

@@ -33,8 +33,7 @@ export class CourtV2Component {
 
   // oninit get current item
   ngOnInit() {
-    console.log('data', this.data);
-
+    // console.log('data', this.data);
     // this.data.find((item) => console.log('item', item));
 
     // find the first item in the array that has a value of false for canProceed
@@ -77,36 +76,29 @@ export class CourtV2Component {
     }
   }
 
-  // private scrollToCurrentItem(currentItem: any) {
-  //   console.log('get natvie element value', this.cardContainer.nativeElement);
-  //   const dis = this.cardContainer.nativeElement;
-  //   // console.log('card container', dis)
-  //   const cardIndex = this.data.indexOf(currentItem);
-
-  //   // Calculate the scroll position to place the current item at the beginning
-  //   const cardWidth = dis.querySelector('.div')?.clientWidth || 0;
-  //   console.log('card width', cardWidth);
-  //   const scrollPosition = cardIndex * cardWidth;
-
-  //   // Set the scroll position
-  //   dis.scrollLeft = scrollPosition;
-  // }
+// this works great if the list is long enough, if there aren't items after current item than it doesn't work
 
   private scrollToCurrentItem(currentItem: any) {
     const cardContainer = this.cardContainer.nativeElement;
+
     const cardIndex = this.data.indexOf(currentItem);
+    console.log('card index', cardIndex);
 
     // Calculate the scroll position to make the current item the first visible item
     const cardWidth = cardContainer.querySelector('.btn')?.clientWidth || 0;
+    console.log('card width', cardWidth);
     const scrollPosition = cardIndex * cardWidth;
+
+    console.log('scroll position', scrollPosition);
 
     // Set the scroll position
     cardContainer.scrollLeft = scrollPosition;
   }
 
 
-
 }
+
+// ok so the actual issue is that the items list is too short to appropriately scroll the the current item. what should happen instead is that the current item is always the first item in the list even if there are no items showing after it.
 
 /**
  * @how it works
