@@ -1,38 +1,28 @@
-<!-- day-card.component.html -->
+<!-- Skeleton Loading -->
 <div *ngIf="loading; else content">
-  <!-- Skeleton loading -->
   <div class="card skeleton-card" *ngFor="let item of skeleton"></div>
 </div>
+<!-- Content -->
 <ng-template #content>
-  <!-- Actual content -->
-
-  <div #cardContainer class="d-flex justify-content-between overflow-scroll mb-4" >
+  <div #cardContainer class="d-flex justify-content-between overflow-scroll mb-4">
     <button
       class="btn btn-sm btn-secondary me-2"
       *ngFor="let item of data; let i = index"
       [ngClass]="{ disabled: item.disabled || (firstDisabledIndex !== null && i > firstDisabledIndex) }"
       (click)="onCardClick(item)"
     >
-      <h4>Day</h4>
+      <h4>{{ item.title }}</h4>
       <div class="white-circle">
         {{ item.number_val || i + 1 }}
       </div>
       <span *ngIf="item.canProceed" class="dot mt-2"></span>
+      <span *ngIf="!item.canProceed" class="dotplaceholder mt-2"></span>
     </button>
   </div>
 </ng-template>
 
-
-
 <!-- todo: 
-
 current item the whole card should have a black background and white text
-current item is the first item you see, and then you can scroll left or right
-
-
-
-
-
-
+if the list is too short then the current item should still be first with nothing after it, it doesn't have to take up the whole width
 - edge case, what if there are items in the list that are completed, but disabled? 
 -->

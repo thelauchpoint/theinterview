@@ -13,109 +13,109 @@ export class ComponentsComponent extends BaseComponent {
     super();
     this.inputs = [
       {
-        title: 'courtney',
+        title: 'Day',
         disabled: false,
         canProceed: true,
         number_val: 36,
       },
       {
-        title: 'asdf',
+        title: 'Day',
         disabled: false,
         canProceed: true,
         number_val: null,
       },
       {
-        title: 'courtnesdghjy',
+        title: 'Day',
         disabled: false,
         canProceed: true,
         number_val: 16,
       },
       {
-        title: 'couhdgjtyjtyrtney',
+        title: 'Day',
         disabled: true,
         canProceed: false,
         number_val: 8,
       },
       {
-        title: 'courfghsfgtney',
+        title: 'Day',
         disabled: false,
         canProceed: true,
         number_val: 4,
       },
       {
-        title: 'cour2355tney',
+        title: 'Day',
         disabled: true,
         canProceed: true,
         number_val: 0,
       },
       {
-        title: 'courtnesdghjy',
+        title: 'Day',
         disabled: false,
         canProceed: true,
         number_val: 16,
       },
       {
-        title: 'couhdgjtyjtyrtney',
+        title: 'Day',
         disabled: true,
         canProceed: false,
         number_val: 8,
       },
       {
-        title: 'courfghsfgtney',
+        title: 'Day',
         disabled: false,
         canProceed: true,
         number_val: 4,
       },
       {
-        title: 'cour2355tney',
+        title: 'Day',
         disabled: true,
         canProceed: true,
         number_val: 0,
       },
       {
-        title: 'courtnesdghjy',
+        title: 'Day',
         disabled: false,
         canProceed: true,
         number_val: 16,
       },
       {
-        title: 'couhdgjtyjtyrtney',
+        title: 'Day',
         disabled: true,
         canProceed: false,
         number_val: 8,
       },
       {
-        title: 'courfghsfgtney',
+        title: 'Day',
         disabled: false,
         canProceed: true,
         number_val: 4,
       },
       {
-        title: 'cour2355tney',
+        title: 'Day',
         disabled: true,
         canProceed: true,
         number_val: 0,
       },
       {
-        title: 'courtnesdghjy',
+        title: 'Day',
         disabled: false,
         canProceed: true,
         number_val: 16,
       },
       {
-        title: 'couhdgjtyjtyrtney',
+        title: 'Day',
         disabled: true,
         canProceed: false,
         number_val: 8,
       },
       {
-        title: 'courfghsfgtney',
+        title: 'Day',
         disabled: false,
         canProceed: true,
         number_val: 4,
       },
       {
-        title: 'cour2355tney',
+        title: 'Day',
         disabled: true,
         canProceed: true,
         number_val: 0,
@@ -129,11 +129,7 @@ export class ComponentsComponent extends BaseComponent {
   }
 
   handleDisabledChanged(isDisabled: boolean) {
-    // console.log('Disabled changed:', isDisabled);
+    console.log('Disabled changed:', isDisabled);
     // Add your logic for handling the disabled state change
   }
 }
-
-
-
-

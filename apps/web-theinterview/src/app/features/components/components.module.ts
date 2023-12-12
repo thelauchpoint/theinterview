@@ -3,11 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { TestCardComponent } from './card';
 import { ComponentsComponent } from './components.component';
-import { CourtDayStepComponent } from './court-day-step/court-day-step.component';
-import { DayStepComponent } from './day-step/day-step.component';
 import { CourtV2Component } from './court-v2/court-v2.component';
+import { DayStepComponent } from './day-step/day-step.component';
 
-const STANDALONE_COMPONENTS = [TestCardComponent, DayStepComponent, CourtDayStepComponent, CourtV2Component];
+const STANDALONE_COMPONENTS = [TestCardComponent, DayStepComponent, CourtV2Component];
 
 export const routes: Routes = [
   {

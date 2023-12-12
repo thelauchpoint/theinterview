@@ -6,11 +6,8 @@
           <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
             <!-- <theinterview-card></theinterview-card> -->
           </div>
-          <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
-            <theinterview-day-step></theinterview-day-step>
-          </div>
-          <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-3 mb-md-5 mb-xl-10">
-            <!-- need to pass an input of an object  -->
+
+          <div class="col-md-6 col-lg-8 col-xl-12 col-xxl-3 mb-md-5 mb-xl-10">
             <court-v2 [data]="inputs" (disabledChanged)="handleDisabledChanged($event)" (daySelected)="handleDaySelected($event)">></court-v2>
           </div>
         </div>
@@ -18,4 +15,3 @@
     </div>
   </div>
 </div>
-?

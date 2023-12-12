@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, EventEmitter, Input, Output, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2, ViewChild } from '@angular/core';
 
 export interface CardInputs {
   title: string;
@@ -16,47 +16,31 @@ export interface CardInputs {
   standalone: true,
   imports: [CommonModule],
 })
-export class CourtV2Component {
-  @Input() data: Array<CardInputs> = [];
-  skeleton: any[] = Array.from({ length: 10 });
-
-  @Input() loading!: boolean;
-
+export class CourtV2Component implements OnInit, AfterViewInit {
   @ViewChild('cardContainer') cardContainer!: ElementRef; // for left and right scroll
 
-  firstDisabledIndex: number | null = null;
+  @Input() data: Array<CardInputs> = [];
+  @Input() loading!: boolean;
+
+  skeleton: any[] = Array.from({ length: 10 }); //for skeleton loading
+  firstDisabledIndex: number | null = null; // for disabling cards in view only
   currentItem: any;
+
   @Output() daySelected: EventEmitter<any> = new EventEmitter();
   @Output() disabledChanged: EventEmitter<boolean> = new EventEmitter();
 
   constructor(private renderer: Renderer2) {}
 
-  // oninit get current item
   ngOnInit() {
-    // console.log('data', this.data);
-    // this.data.find((item) => console.log('item', item));
-
-    // find the first item in the array that has a value of false for canProceed
-    // current item should be the first item that you can see on the list.
+    // find the first item in the array that has a value of false for canProceed, this is the current item.
     this.currentItem = this.data.find((item) => !item.canProceed);
 
-    // find the first item in the array that is disabled and set all values after that to disabled on the html only
-
-    console.log('currentItem', this.currentItem);
-
     if (this.currentItem) {
-      // console.log('if current item then emit', this.currentItem);
-      this.daySelected.emit(this.currentItem);
       if (this.currentItem.disabled !== null) {
-        // if item in the list is disabled then all items after that should be disabled
+        // get the index of the first disabled index to use to disable by view all following cards
         this.firstDisabledIndex = this.data.indexOf(this.currentItem);
-        // console.log('if current item is disabled emit disabled', this.currentItem.disabled);
-        this.disabledChanged.emit(this.currentItem.disabled);
       }
     }
-
-    // Scroll to the current item
-    // this.scrollToCurrentItem(currentItem);
   }
 
   ngAfterViewInit() {
@@ -65,40 +49,39 @@ export class CourtV2Component {
   }
 
   // Handle card click event
-  onCardClick(item: any) {
-    console.log('card clicked, item', item);
-    if (item.disabled !== null) {
-      console.log('card clicked and item is disabled', item.disabled);
-      this.disabledChanged.emit(item.disabled);
-    } else {
+  onCardClick(item: CardInputs) {
+    // if item clicked is disabled then emit disabledChanged event
+    // if (item.disabled === true) {
+    //   console.log('card clicked and item is disabled', item.disabled);
+    //   this.disabledChanged.emit(item.disabled);
+    // } else
+    if (!item.disabled) {
       console.log('card clicked and item is not disabled, emit item', item);
       this.daySelected.emit(item);
     }
   }
 
-// this works great if the list is long enough, if there aren't items after current item than it doesn't work
-
-  private scrollToCurrentItem(currentItem: any) {
+  // this works great if the list is long enough, if there aren't items after current item than it doesn't work
+  private scrollToCurrentItem(currentItem: CardInputs) {
     const cardContainer = this.cardContainer.nativeElement;
 
     const cardIndex = this.data.indexOf(currentItem);
-    console.log('card index', cardIndex);
+    // console.log('card index', cardIndex);
 
     // Calculate the scroll position to make the current item the first visible item
     const cardWidth = cardContainer.querySelector('.btn')?.clientWidth || 0;
-    console.log('card width', cardWidth);
+    // console.log('card width', cardWidth);
     const scrollPosition = cardIndex * cardWidth;
 
-    console.log('scroll position', scrollPosition);
+    // console.log('scroll position', scrollPosition);
 
     // Set the scroll position
     cardContainer.scrollLeft = scrollPosition;
   }
-
-
 }
-
 // ok so the actual issue is that the items list is too short to appropriately scroll the the current item. what should happen instead is that the current item is always the first item in the list even if there are no items showing after it.
+
+
 
 /**
  * @how it works

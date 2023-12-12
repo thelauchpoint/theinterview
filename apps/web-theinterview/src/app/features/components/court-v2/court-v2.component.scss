@@ -4,15 +4,12 @@
   padding: 4px;
 }
 
-/* day-card.component.css */
-
 .card-container {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
   width: 100%; /* Ensure the container takes the full width */
 }
-
 
 .card {
   width: 200px;
@@ -33,10 +30,15 @@
 .dot {
   height: 12px;
   width: 12px;
-  background-color: green;
+  background-color: black;
   border-radius: 50%;
   display: inline-block;
   margin-left: 5px;
+}
+.dotplaceholder {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
 }
 
 .disabled {
