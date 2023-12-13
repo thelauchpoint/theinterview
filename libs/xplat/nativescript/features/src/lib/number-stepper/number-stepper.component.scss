@@ -15,6 +15,20 @@
   animation: skeleton-loading 1.5s infinite ease-in-out;
 }
 
+.text-light {
+  color: white;
+}
+.text-dark {
+  color: black;
+}
+.background-dark {
+  background-color: black;
+  color: white;
+}
+.background-standard {
+  background-color: lightgray;
+}
+
 .white-circle {
   border-radius: 50%;
   background-color: white;
@@ -37,10 +51,10 @@
 }
 
 //  if you want it to be even lighter for disabled:
-// .disabled {
-//   opacity: 0.5;
-//   pointer-events: none;
-// }
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
 
 @keyframes skeleton-loading {
   0% {

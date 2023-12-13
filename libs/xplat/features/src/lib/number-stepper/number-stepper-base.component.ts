@@ -38,7 +38,7 @@ export class NumberStepperBaseComponent extends BaseComponent implements OnInit 
     // find the first item in the array that has a value of false for canProceed, this is the current item.
     // todo:?? and not disabled if they don't want to show disabled cards
     this.currentItem = this.data.find((item) => !item.canProceed);
-
+console.log('BASEBASEBASWE Current Item', this.currentItem)
     if (this.currentItem) {
       if (this.currentItem.disabled !== null) {
         // get the index of the first disabled index to use to disable by view all following cards

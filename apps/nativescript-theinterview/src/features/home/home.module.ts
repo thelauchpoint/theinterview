@@ -4,6 +4,8 @@ import { NativeScriptRouterModule } from '@nativescript/angular';
 
 import { SharedModule } from '../shared/shared.module';
 import { HomeComponent, HOME_COMPONENTS } from './components';
+import { NumberStepperComponent } from '@theinterview/xplat/nativescript/features';
+
 
 export const routes: Routes = [
   {
@@ -13,7 +15,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [SharedModule, NativeScriptRouterModule.forChild(routes)],
+  imports: [SharedModule, NativeScriptRouterModule.forChild(routes), NumberStepperComponent],
   declarations: [...HOME_COMPONENTS],
   exports: [...HOME_COMPONENTS],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],

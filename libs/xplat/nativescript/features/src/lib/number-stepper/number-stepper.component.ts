@@ -23,11 +23,15 @@ export class NumberStepperComponent extends NumberStepperBaseComponent {
   //     text: 'text-white',
   //   };
 
-  constructor() {
-    super();
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!NumberStepperComponent');
-  }
+  // constructor() {
+  //   super();
+  //   console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!NumberStepperComponent', this.currentItem);
+  // }
 
+
+  ngAfterViewInit(){
+    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!NumberStepperComponent', this.data);
+  }
   // ngAfterViewInit() {
   //   // Scroll to the current item
   //   this.scrollToCurrentItem(this.currentItem);
