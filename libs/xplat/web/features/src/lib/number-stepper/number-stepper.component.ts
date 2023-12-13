@@ -1,23 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CardInputs, NumberStepperBaseComponent } from '@theinterview/xplat/features';
-
-// export interface CardInputs {
-//   title: string;
-//   disabled: boolean;
-//   canProceed: boolean;
-//   numberVal?: number | null;
-// }
-
-// //todo:?? to configure the classes of the cards
-// export interface CardConfigs {
-//   classes: {
-//     active: string;
-//     disabled: string;
-//     current: string;
-//     text: string;
-//   };
-// }
 
 @Component({
   selector: 'number-stepper',
@@ -27,32 +10,7 @@ import { CardInputs, NumberStepperBaseComponent } from '@theinterview/xplat/feat
   imports: [CommonModule],
 })
 export class NumberStepperComponent extends NumberStepperBaseComponent implements OnInit, AfterViewInit {
-  // button color, button text, disabled
-
   @ViewChild('cardContainer') cardContainer!: ElementRef; // for left and right scroll
-
-  // @Input() data: Array<CardInputs> = [];
-  // @Input() loading!: boolean;
-
-  // skeleton: any[] = Array.from({ length: 10 }); //for skeleton loading
-  // firstDisabledIndex: number | null = null; // for disabling cards in view only
-  // currentItem: any;
-
-  // @Output() daySelected: EventEmitter<any> = new EventEmitter();
-  // @Output() disabledChanged: EventEmitter<boolean> = new EventEmitter();
-
-  // ngOnInit() {
-  //   // find the first item in the array that has a value of false for canProceed, this is the current item.
-  //   // todo:?? and not disabled if they don't want to show disabled cards
-  //   this.currentItem = this.data.find((item) => !item.canProceed);
-
-  //   if (this.currentItem) {
-  //     if (this.currentItem.disabled !== null) {
-  //       // get the index of the first disabled index to use to disable by view all following cards
-  //       this.firstDisabledIndex = this.data.indexOf(this.currentItem);
-  //     }
-  //   }
-  // }
 
   //  todo:?? set if's for the classes of the cards here based on config values
   // setCardClasses(card: CardInputs, index: number) {
@@ -68,21 +26,6 @@ export class NumberStepperComponent extends NumberStepperBaseComponent implement
     this.scrollToCurrentItem(this.currentItem);
   }
 
-  // Handle card click event
-  // onCardClick(item: CardInputs) {
-  //   // todo:?? do we want to emit if it's disabled? or just not emit anything?
-  //   // if item clicked is disabled then emit disabledChanged event
-  //   // if (item.disabled === true) {
-  //   //   console.log('card clicked and item is disabled', item.disabled);
-  //   //   this.disabledChanged.emit(item.disabled);
-  //   // } else
-  //   if (!item.disabled) {
-  //     // console.log('card clicked and item is not disabled, emit item', item);
-  //     this.daySelected.emit(item);
-  //   }
-  // }
-
-  // this works great if the list is long enough, if there aren't items after current item than it doesn't work
   private scrollToCurrentItem(currentItem: CardInputs) {
     const cardContainer = this.cardContainer.nativeElement;
 
@@ -97,7 +40,6 @@ export class NumberStepperComponent extends NumberStepperBaseComponent implement
     cardContainer.scrollLeft = scrollPosition;
   }
 }
-// ok so the actual issue is that the items list is too short to appropriately scroll the the current item. what should happen instead is that the current item is always the first item in the list even if there are no items showing after it.
 
 /**
  * @how it works

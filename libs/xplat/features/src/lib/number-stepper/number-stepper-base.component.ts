@@ -22,7 +22,7 @@ export interface CardConfigs {
   standalone: true,
 })
 export class NumberStepperBaseComponent extends BaseComponent implements OnInit {
-  // @ViewChild('cardContainer') cardContainer!: ElementRef; // for left and right scroll
+
 
   @Input() data: Array<CardInputs> = [];
   @Input() loading!: boolean;
