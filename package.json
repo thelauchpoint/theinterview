@@ -64,6 +64,7 @@
     "@angular/compiler-cli": "16.2.12",
     "@angular/language-service": "16.2.12",
     "@nativescript/eslint-plugin": "~0.0.4",
+    "@nativescript/ios": "8.6.3",
     "@nativescript/types": "~8.4.0",
     "@nativescript/webpack": "~5.0.0",
     "@nestjs/schematics": "10.0.3",

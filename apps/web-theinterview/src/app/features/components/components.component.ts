@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BaseComponent } from '@theinterview/xplat/core';
-import { CardInputs } from './court-v2/court-v2.component';
+import { CardInputs } from '@theinterview/xplat/features';
 
 @Component({
   selector: 'theinterview-components',

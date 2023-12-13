@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NumberStepperComponent } from '@theinterview/xplat/web/features';
 import { SharedModule } from '../shared/shared.module';
 import { TestCardComponent } from './card';
 import { ComponentsComponent } from './components.component';
-import { CourtV2Component } from './court-v2/court-v2.component';
 import { DayStepComponent } from './day-step/day-step.component';
 
-const STANDALONE_COMPONENTS = [TestCardComponent, DayStepComponent, CourtV2Component];
+const STANDALONE_COMPONENTS = [TestCardComponent, DayStepComponent, NumberStepperComponent];
 
 export const routes: Routes = [
   {
