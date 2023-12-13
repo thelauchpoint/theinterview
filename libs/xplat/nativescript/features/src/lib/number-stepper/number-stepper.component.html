@@ -1,0 +1,28 @@
+<!-- Skeleton Loading -->
+<!-- <GridLayout *ngIf="loading; else content" rows="auto" columns="*">
+  <GridLayout *ngFor="let item of skeleton" class="card skeleton-card"></GridLayout>
+</GridLayout> -->
+
+<!-- Content -->
+<!-- <ng-template #content> -->
+  <!-- <ScrollView orientation="horizontal" height="100"> -->
+    <!-- <StackLayout orientation="horizontal" class="mb-4"> -->
+      <StackLayout *ngFor="let item of data; let i = index">
+        <Button
+          [class.disabled]="item.disabled || (firstDisabledIndex !== null && i > firstDisabledIndex)"
+          [class.dark]="currentItem === item"
+          (tap)="onCardClick(item)"
+        >
+          <StackLayout>
+            <Label [class.text-light]="currentItem === item" text="{{ item.title }}"></Label>
+            <Label [class.text-dark]="currentItem === item" class="white-circle">{{ item.numberVal || i + 1 }}</Label>
+            <Label *ngIf="item.canProceed" class="dot mt-n4"></Label>
+            <Label *ngIf="!item.canProceed" class="dotplaceholder"></Label>
+          </StackLayout>
+        </Button>
+      </StackLayout>
+    <!-- </StackLayout> -->
+  <!-- </ScrollView> -->
+<!-- </ng-template> -->
+
+<Label text="{{ currentItem | json }}"></Label>

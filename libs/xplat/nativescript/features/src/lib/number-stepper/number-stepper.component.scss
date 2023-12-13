@@ -1,0 +1,52 @@
+// Skeleton
+.card {
+  width: 200px;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.skeleton-card {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  background-color: #f0f0f0;
+  animation: skeleton-loading 1.5s infinite ease-in-out;
+}
+
+.white-circle {
+  border-radius: 50%;
+  background-color: white;
+  padding: 4px;
+  margin-top: 12px;
+}
+
+.dot {
+  height: 6px;
+  width: 6px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dotplaceholder {
+  height: 6px;
+  width: 6px;
+  display: inline-block;
+}
+
+//  if you want it to be even lighter for disabled:
+// .disabled {
+//   opacity: 0.5;
+//   pointer-events: none;
+// }
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}

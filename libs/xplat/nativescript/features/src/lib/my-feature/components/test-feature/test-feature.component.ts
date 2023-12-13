@@ -104,6 +104,39 @@ export class TestFeatureComponent extends TestFeatureBaseComponent {
     { label: 'Earned Premium', key: 'earned_premium' },
   ];
 
+  inputs = [
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 36,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: null,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 16,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: false,
+      numberVal: 8,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+  ];
+
   constructor(_Store: Store) {
     super(_Store);
   }

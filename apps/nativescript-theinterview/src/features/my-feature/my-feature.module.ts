@@ -1,7 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { Routes } from '@angular/router';
 import { NativeScriptRouterModule } from '@nativescript/angular';
-import { MyFeatureModule, TestFeatureComponent } from '@theinterview/xplat/nativescript/features';
+import { MyFeatureModule, NumberStepperComponent, TestFeatureComponent } from '@theinterview/xplat/nativescript/features';
 import { FEATURE_COMPONENTS } from '.';
 import { SharedModule } from '../shared/shared.module';
 import { FeatureComponent } from './components/test-feature.component';
@@ -14,6 +14,7 @@ export const routes: Routes = [
       {
         path: '',
         component: TestFeatureComponent,
+        // component: NumberStepperComponent,
       },
     ],
   },
