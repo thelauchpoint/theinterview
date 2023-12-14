@@ -1,0 +1,27 @@
+<GridLayout *ngIf="loading; else content" rows="auto">
+  <GridLayout *ngFor="let item of skeleton" rows="auto">
+    <StackLayout class="skeleton-card" height="100"></StackLayout>
+  </GridLayout>
+</GridLayout>
+<!-- Content -->
+<ng-template #content>
+  <ScrollView orientation="horizontal" #scrollView (loaded)="bindScrollView()">
+    <FlexboxLayout alignItems="flex-start">
+      <StackLayout
+        *ngFor="let item of data; let i = index"
+        [class.disabled]="item.disabled || (firstDisabledIndex !== null && i > firstDisabledIndex)"
+        [class.background-dark]="currentItem === item"
+        [class.background-standard]="currentItem !== item"
+        style="border-radius: 10%; margin-top: 10; margin-right: 10; padding: 15"
+        (tap)="onCardClick(item)"
+      >
+        <Label [class.text-light]="currentItem === item" [text]="item.title" fontSize="20" fontWeight="bold"></Label>
+        <StackLayout class="white-circle" [class.text-dark]="currentItem === item">
+          <Label [text]="item.numberVal || i + 1" fontSize="18" fontWeight="bold"></Label>
+        </StackLayout>
+        <Label *ngIf="item.canProceed" class="dot"></Label>
+        <Label *ngIf="!item.canProceed" class="dotplaceholder"></Label>
+      </StackLayout>
+    </FlexboxLayout>
+  </ScrollView>
+</ng-template>

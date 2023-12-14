@@ -1,0 +1,34 @@
+<!-- Skeleton Loading -->
+<div *ngIf="loading; else content">
+  <div class="card skeleton-card" *ngFor="let item of skeleton"></div>
+</div>
+<!-- Content -->
+<ng-template #content>
+  <div #cardContainer class="d-flex justify-content-start overflow-scroll">
+    <button
+      class="btn btn-sm btn-secondary me-2"
+      *ngFor="let item of data; let i = index"
+      [ngClass]="{
+        disabled: item.disabled || (firstDisabledIndex !== null && i > firstDisabledIndex),
+        'btn-dark text-light text-white': currentItem === item
+      }"
+      (click)="onCardClick(item)"
+    >
+      <h4 [ngClass]="{ 'text-light': currentItem === item }" class="mt-2">{{ item.title }}</h4>
+      <div class="white-circle" [ngClass]="{ 'text-dark': currentItem === item }">
+        {{ item.numberVal || i + 1 }}
+      </div>
+      <span *ngIf="item.canProceed" class="dot mt-n4"></span>
+      <span *ngIf="!item.canProceed" class="dotplaceholder"></span>
+    </button>
+  </div>
+</ng-template>
+
+{{ currentItem | json }}
+
+<!--  EDGE CASES: 
+  -if the current item is disabled but it's the current item, should it be clickable and set to enabled? 
+  ( would this be on the client or here? )
+  - if the list is too short then the current item should still be first with nothing after it,
+ it doesn't have to take up the whole width
+ -->

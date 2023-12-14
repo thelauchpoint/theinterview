@@ -104,6 +104,8 @@ export class TestFeatureComponent extends TestFeatureBaseComponent {
     { label: 'Earned Premium', key: 'earned_premium' },
   ];
 
+  
+
   constructor(_Store: Store) {
     super(_Store);
   }
