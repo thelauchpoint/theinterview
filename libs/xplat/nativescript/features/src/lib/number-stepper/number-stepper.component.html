@@ -5,7 +5,7 @@
 </GridLayout>
 <!-- Content -->
 <ng-template #content>
-  <ScrollView orientation="horizontal" #scrollView>
+  <ScrollView orientation="horizontal" #scrollView id="myScroller">
     <FlexboxLayout alignItems="flex-start" #cardContainer>
       <StackLayout
         id="contentContainer"
@@ -25,11 +25,4 @@
       </StackLayout>
     </FlexboxLayout>
   </ScrollView>
-<!-- 
-  <RadListView orientation="horizontal" #somerandomstuff>
-    <StackLayout *ngFor="let item of data; let i = index">
-      <Label [text]="item.numberVal"></Label>
-    </StackLayout>
-
-  </RadListView> -->
 </ng-template>

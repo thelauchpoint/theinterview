@@ -1,15 +1,15 @@
 // Skeleton
 .card {
-  width: 200px;
-  margin: 10px;
+  width: 12.5em; //200px;
+  margin: 0.625em; //10px;
   display: inline-block;
   cursor: pointer;
 }
 
 .skeleton-card {
-  width: 200px;
-  height: 100px;
-  margin: 10px;
+  width: 12.5em; //200px;
+  height: 6.25em; //100px;
+  margin: 0.625em; //10px;
   display: inline-block;
   background-color: #f0f0f0;
   animation: skeleton-loading 1.5s infinite ease-in-out;
@@ -18,21 +18,23 @@
 .white-circle {
   border-radius: 50%;
   background-color: white;
-  padding: 4px;
-  margin-top: 12px;
+  padding: 0.35em; //4px;
+  margin-top: 1em; //12px
+  margin-bottom: -0.75em;
+  font-weight: bold;
 }
 
 .dot {
-  height: 6px;
-  width: 6px;
+  height: 0.375em; //6px
+  width: 0.375em; //6px
   background-color: black;
   border-radius: 50%;
   display: inline-block;
 }
 
 .dotplaceholder {
-  height: 6px;
-  width: 6px;
+  height: 0.375em; //6px
+  width: 0.375em; //6px
   display: inline-block;
 }
 
@@ -44,9 +46,9 @@
 
 @keyframes skeleton-loading {
   0% {
-    background-position: -200px 0;
+    background-position: -12.5em 0; //200px 0;
   }
   100% {
-    background-position: 200px 0;
+    background-position: 12.5em 0; //200px 0;
   }
 }

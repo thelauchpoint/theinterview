@@ -19,8 +19,5 @@
     verticalAlignment="center"
     style="color: black; background-color: rgba(255, 110, 7, 0.675); border-radius: 50%; height: 7%"
   ></Button> -->
-  <number-stepper
-  [data]="inputs"></number-stepper>
+  <number-stepper [data]="inputs" (disabledChanged)="handleDisabledChanged($event)" (daySelected)="handleDaySelected($event)"></number-stepper>
 </StackLayout>
-
-

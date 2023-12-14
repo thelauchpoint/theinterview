@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, NO_ERRORS_SCHEMA, ViewChild } from '@angular/core';
 import { NativeScriptCommonModule } from '@nativescript/angular';
+import { Page, StackLayout } from '@nativescript/core';
 import { ScrollView } from '@nativescript/core/ui/scroll-view';
-// import { ScrollView } from '@nativescript/core';
-import { CardInputs, NumberStepperBaseComponent } from '@theinterview/xplat/features';
-import { RadListViewComponent } from 'nativescript-ui-listview/angular';
+import { NumberStepperBaseComponent } from '@theinterview/xplat/features';
+
 @Component({
   selector: 'number-stepper',
   templateUrl: './number-stepper.component.html',
@@ -14,71 +14,58 @@ import { RadListViewComponent } from 'nativescript-ui-listview/angular';
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class NumberStepperComponent extends NumberStepperBaseComponent {
-  // @ViewChild('cardContainer') cardContainer!: ElementRef; // for left and right scroll
-  // @ViewChild('scrollView', { static: false }) scrollView!: ScrollView;
-  @ViewChild('scrollView', { static: false }) scrollViewRef!: ElementRef<ScrollView>;
+  // @ViewChild('scrollView', { static: false }) scrollViewRef!: ElementRef<ScrollView>;
+  @ViewChild('scrollView', { static: false }) scrollView!: ScrollView;
+  @ViewChild('cardContainer', { static: false }) cardContainer!: ElementRef;
+  page!: Page;
+  scrollLayout!: ScrollView;
+  contentContainer!: StackLayout;
+  numLabels = 50;
 
-  // @ViewChild('somerandomstuff', { static: false }) somerandomstuff!: RadListViewComponent;
-
-  //  todo:?? set if's for the classes of the cards here based on config values
-  // setCardClasses(card: CardInputs, index: number) {
-  //   const config: CardConfigs = {
-  //     active: 'btn-primary',
-  //     disabled: 'btn-secondary',
-  //     current: 'btn-primary',
-  //     text: 'text-white',
-  //   };
-  // constructor(private scrollViewRef: ElementRef) {
-  //   super();
-  // }
   ngAfterViewInit() {
     console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!NumberStepperComponent', this.data);
-    this.scrollToCurrentItem(this.currentItem);
+    // this.scrollToCurrentItem(this.currentItem);
+    // this.scrollToIndex(this.currentItem);
+    // this.scrollToId(this.currentItem);
   }
 
-  scrollToCurrentItem(currentItem: CardInputs) {
-    const cardIndex = this.data.indexOf(currentItem);
-    console.log('cardIndex', cardIndex);
-
-    // console.log('scrollToCurrentItem index number', cardIndex);
-    // // Set the scroll position
-    // this.listView.nativeElement.scrollToIndex(cardIndex);
-    // this.listView.nativeElement.scrollToIndexAnimated(cardIndex);
-    // Set the scroll position
-    // this.somerandomstuff.listView.scrollToIndex(cardIndex);
-
-    // Set the scroll position
-    // this.somerandomstuff.listView.scrollToIndex(cardIndex);
-    // this.cardContainer.nativeElement.scrollToIndex(cardIndex);
-
-    // Assuming each item has a fixed width, you can adjust this value based on your layout
-    const itemWidth = 150; // Adjust this value based on your layout
-
-    const scrollPosition = cardIndex * itemWidth;
-
-    console.log('scrollPosition', cardIndex, itemWidth, scrollPosition);
-
-    // Set the scroll position
-    this.scrollViewRef.nativeElement.scrollToHorizontalOffset(scrollPosition, false);
-  }
-
-  // create a method that will scroll to the this.currentItem when the component is loaded, this needs to work on nativescript
   // scrollToCurrentItem(currentItem: CardInputs) {
-  //   console.log('scrollToCurrentItem', currentItem);
-  //   // const cardContainer = this.cardContainer.nativeElement;
   //   const cardIndex = this.data.indexOf(currentItem);
   //   console.log('cardIndex', cardIndex);
-  //   // Calculate the scroll position to make the current item the first visible item
-  //   // const cardWidth = cardContainer.querySelector('.btn')?.clientWidth || 0;
-  //   const cardContainer = page.getViewById('cardContainer'); // Assuming 'cardContainer' is the id of your card container
-  //   const btn = cardContainer.getViewById('btn'); // Assuming 'btn' is the id of your button
 
-  //   const cardWidth = btn ? btn.getActualSize().width : 0;
+  //   // Assuming each item has a fixed width, you can adjust this value based on your layout
+  //   const itemWidth = 150; // Adjust this value based on your layout
 
-  //   console.log('cardWidth', cardWidth);
-  //   const scrollPosition = cardIndex * cardWidth;
-  //   console.log('scrollPosition', scrollPosition);
+  //   const scrollPosition = cardIndex * itemWidth;
+
+  //   console.log('scrollPosition', cardIndex, itemWidth, scrollPosition);
+
+  //   // this.cardContainer.nativeElement.scrollToHorizontalOffset(scrollPosition, false);
+  //   // this.cardContainer.scrollLeft = scrollPosition;
+  //   // console.log('DOTHEMATHDOE', this.scrollView.scrollToHorizontalOffset(scrollPosition, false));
   //   // Set the scroll position
-  //   cardContainer.scrollLeft = scrollPosition;
+  //   // this.scrollViewRef.nativeElement.scrollToHorizontalOffset(scrollPosition, false);
   // }
+
+  // scrollToIndex(args: EventData) {
+  //   this.page = <Page>args.object;
+  //   this.scrollLayout = this.page.getViewById('myScroller') as ScrollView;
+  //   this.contentContainer = this.page.getViewById('contentContainer') as StackLayout;
+
+  //   for (let i = 1; i <= this.numLabels; i++) {
+  //     let lbl = new Label();
+  //     lbl.id = 'lbl' + i;
+  //     lbl.text = 'Label ' + i;
+  //     this.contentContainer.addChild(lbl);
+  //   }
+
+  // this.scrollViewRef.nativeElement.scrollToIn
 }
+
+// scrollToId(args: CardInputs) {
+//   const base = this.page.getViewById('lbl') as Label;
+//   const cardIndex = this.data.indexOf(args);
+//   let targt = this.page.getViewById('lbl' + cardIndex) as Label;
+//   this.scrollLayout.scrollToHorizontalOffset(targt.getLocationRelativeTo(base).x, false);
+// }
+// }

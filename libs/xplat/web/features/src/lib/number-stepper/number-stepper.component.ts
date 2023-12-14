@@ -12,17 +12,7 @@ import { CardInputs, NumberStepperBaseComponent } from '@theinterview/xplat/feat
 export class NumberStepperComponent extends NumberStepperBaseComponent implements OnInit, AfterViewInit {
   @ViewChild('cardContainer') cardContainer!: ElementRef; // for left and right scroll
 
-  //  todo:?? set if's for the classes of the cards here based on config values
-  // setCardClasses(card: CardInputs, index: number) {
-  //   const config: CardConfigs = {
-  //     active: 'btn-primary',
-  //     disabled: 'btn-secondary',
-  //     current: 'btn-primary',
-  //     text: 'text-white',
-  //   };
-
   ngAfterViewInit() {
-    // Scroll to the current item
     this.scrollToCurrentItem(this.currentItem);
   }
 

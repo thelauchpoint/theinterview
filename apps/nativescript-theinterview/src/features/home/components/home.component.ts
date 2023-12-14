@@ -42,7 +42,7 @@ export class HomeComponent extends BaseComponent {
     },
     {
       title: 'Day',
-      disabled: false,
+      disabled: true,
       canProceed: true,
       numberVal: 4,
     },
@@ -79,7 +79,7 @@ export class HomeComponent extends BaseComponent {
     {
       title: 'Day',
       disabled: false,
-      canProceed: true,
+      canProceed: false,
       numberVal: 4,
     },
     {
@@ -119,5 +119,13 @@ export class HomeComponent extends BaseComponent {
   }
   goToFeature() {
     this._routerExtensions.navigate(['/feature']);
+  }
+
+  handleDaySelected(selectedDay: any) {
+    console.log('receive day selected from child:', selectedDay);
+  }
+
+  handleDisabledChanged(isDisabled: boolean) {
+    console.log('receive disabled from child changed:', isDisabled);
   }
 }
