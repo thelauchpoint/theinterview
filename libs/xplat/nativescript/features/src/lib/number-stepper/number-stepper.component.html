@@ -5,27 +5,7 @@
 </GridLayout>
 <!-- Content -->
 <ng-template #content>
-  <!-- <ScrollView orientation="horizontal" id="myScroller" >
-    <FlexboxLayout alignItems="flex-start" #cardContainer >
-      <StackLayout
-        id="contentContainer"
-        *ngFor="let item of data; let i = index"
-        [class.disabled]="item.disabled || (firstDisabledIndex !== null && i > firstDisabledIndex)"
-        [class.background-dark]="currentItem === item"
-        [class.background-standard]="currentItem !== item"
-        style="border-radius: 10%; margin-top: 10; margin-right: 10; padding: 15"
-        (tap)="onCardClick(item)"
-      >
-        <Label [class.text-light]="currentItem === item" [text]="item.title" fontSize="20" fontWeight="bold"></Label>
-        <StackLayout class="white-circle" [class.text-dark]="currentItem === item">
-          <Label [text]="item.numberVal || i + 1" fontSize="18" fontWeight="bold"></Label>
-        </StackLayout>
-        <Label *ngIf="item.canProceed" class="dot"></Label>
-        <Label *ngIf="!item.canProceed" class="dotplaceholder"></Label>
-      </StackLayout>
-    </FlexboxLayout>
-  </ScrollView> -->
-  <ScrollView orientation="horizontal" id="myScroller" #scrollView>
+  <ScrollView orientation="horizontal" #scrollView>
     <FlexboxLayout alignItems="flex-start" #cardContainer>
       <StackLayout
         id="contentContainer"
@@ -45,5 +25,11 @@
       </StackLayout>
     </FlexboxLayout>
   </ScrollView>
-  
+<!-- 
+  <RadListView orientation="horizontal" #somerandomstuff>
+    <StackLayout *ngFor="let item of data; let i = index">
+      <Label [text]="item.numberVal"></Label>
+    </StackLayout>
+
+  </RadListView> -->
 </ng-template>
