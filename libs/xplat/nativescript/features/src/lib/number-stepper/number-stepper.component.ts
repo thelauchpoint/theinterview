@@ -1,8 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, NO_ERRORS_SCHEMA, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, NO_ERRORS_SCHEMA, ViewChild } from '@angular/core';
 import { NativeScriptCommonModule } from '@nativescript/angular';
+import { FlexboxLayout, StackLayout, View } from '@nativescript/core';
 import { CardInputs, NumberStepperBaseComponent } from '@theinterview/xplat/features';
 
+// let page: Page;
+// let scrollLayout: ScrollView;
+// let contentContainer: StackLayout;
+// let numLabels = 50;
 @Component({
   selector: 'number-stepper',
   templateUrl: './number-stepper.component.html',
@@ -12,8 +17,8 @@ import { CardInputs, NumberStepperBaseComponent } from '@theinterview/xplat/feat
   schemas: [NO_ERRORS_SCHEMA],
 })
 export class NumberStepperComponent extends NumberStepperBaseComponent {
-  // @ViewChild('cardContainer') cardContainer!: ElementRef; // for left and right scroll
-
+  @ViewChild('cardContainer') cardContainer!: ElementRef; // for left and right scroll
+  @ViewChild('scrollView') scrollView!: ElementRef;
   //  todo:?? set if's for the classes of the cards here based on config values
   // setCardClasses(card: CardInputs, index: number) {
   //   const config: CardConfigs = {
@@ -22,24 +27,34 @@ export class NumberStepperComponent extends NumberStepperBaseComponent {
   //     current: 'btn-primary',
   //     text: 'text-white',
   //   };
-
-  // constructor() {
-  //   super();
-  //   console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!NumberStepperComponent', this.currentItem);
-  // }
-
-
-  ngAfterViewInit(){
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!NumberStepperComponent', this.data);
+  constructor(private scrollViewRef: ElementRef) {
+    super();
   }
-  // ngAfterViewInit() {
-  //   // Scroll to the current item
-  //   this.scrollToCurrentItem(this.currentItem);
-  // }
+  ngAfterViewInit() {
+    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!NumberStepperComponent', this.data);
+    // scrollLayout = page.getViewById('myScroller') as ScrollView;
+    // contentContainer = page.getViewById('contentContainer') as StackLayout;
+
+    // for (let i = 1; i <= numLabels; i++) {
+    //   const label = new Label();
+    //   label.id = 'label' + i;
+    //   contentContainer.addChild(label);
+    // }
+    // this.scrollToCurrentId(this.currentItem);
+    // }
+    // ngAfterViewInit() {
+    // Scroll to the current item
+    this.scrollToCurrentItem(this.currentItem);
+  }
+
+  // scrollToCurrentId(currentItem: CardInputs) {
+  //   const base  = page.getViewById('label1') as Label;
+  //   const target = page.getViewById('label40') as Label;
+  //   scrollLayout.scrollToHorizontalOffset(target.getLocationRelativeTo(base).x, true);
 
   // private scrollToCurrentItem(currentItem: CardInputs) {
   //   const cardContainer = this.cardContainer.nativeElement;
-
+  //   console.log('scrollToCurrentItem', cardContainer);
   //   const cardIndex = this.data.indexOf(currentItem);
 
   //   // Calculate the scroll position to make the current item the first visible item
@@ -50,6 +65,39 @@ export class NumberStepperComponent extends NumberStepperBaseComponent {
   //   // Set the scroll position
   //   cardContainer.scrollLeft = scrollPosition;
   // }
+
+  //   private scrollToCurrentItem(currentItem: CardInputs): void {
+  //     const scrollView = this.cardContainer.nativeElement;
+  //     const cardIndex = this.data.indexOf(currentItem);
+  //   console.log('cardindx', cardIndex)
+  //     if (scrollView && cardIndex >= 0) {
+  //       // Calculate the scroll position to make the current item the first visible item
+  //       const cardWidth = scrollView.getChildAt(cardIndex).getMeasuredWidth() || 0;
+  //       console.log('cardWidth', cardWidth)
+  //       const scrollPosition = cardIndex * cardWidth;
+  //       console.log('scrollPosition', scrollPosition)
+  //       // Set the scroll position
+  //       scrollView.scrollToHorizontalOffset(scrollPosition, true);
+  //     }
+  //   }
+
+  // }
+  private scrollToCurrentItem(currentItem: CardInputs): void {
+    const scrollView = this.scrollViewRef.nativeElement;
+    const cardIndex = this.data.indexOf(currentItem);
+
+    if (scrollView && cardIndex >= 0) {
+      const cardContainer = scrollView.getViewById("contentContainer") as FlexboxLayout; // Assuming your cards are direct children of the ScrollView
+      const stackLayout = cardContainer.getChildAt(cardIndex) as View;
+
+      // if (stackLayout) {
+        const cardWidth = stackLayout.getMeasuredWidth();
+        const scrollPosition = cardIndex * cardWidth;
+
+        scrollView.scrollToHorizontalOffset(scrollPosition, true);
+      // }
+    }
+  }
 }
 
 /**

@@ -40,8 +40,79 @@ export class HomeComponent extends BaseComponent {
       canProceed: true,
       numberVal: 4,
     },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
+    {
+      title: 'Day',
+      disabled: false,
+      canProceed: true,
+      numberVal: 4,
+    },
   ];
-
 
   constructor(private _routerExtensions: RouterExtensions) {
     super();
