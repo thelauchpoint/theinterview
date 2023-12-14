@@ -5,10 +5,9 @@
 </GridLayout>
 <!-- Content -->
 <ng-template #content>
-  <ScrollView orientation="horizontal" #scrollView id="myScroller">
-    <FlexboxLayout alignItems="flex-start" #cardContainer>
+  <ScrollView orientation="horizontal" #scrollView (loaded)="bindScrollView()">
+    <FlexboxLayout alignItems="flex-start">
       <StackLayout
-        id="contentContainer"
         *ngFor="let item of data; let i = index"
         [class.disabled]="item.disabled || (firstDisabledIndex !== null && i > firstDisabledIndex)"
         [class.background-dark]="currentItem === item"

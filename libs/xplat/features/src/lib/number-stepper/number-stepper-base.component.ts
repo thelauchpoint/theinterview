@@ -8,16 +8,6 @@ export interface CardInputs {
   numberVal?: number | null;
 }
 
-//todo:?? to configure the classes of the cards
-// export interface CardConfigs {
-//   classes: {
-//     active: string;
-//     disabled: string;
-//     current: string;
-//     text: string;
-//   };
-// }
-
 @Directive({
   standalone: true,
 })
@@ -34,7 +24,6 @@ export class NumberStepperBaseComponent extends BaseComponent implements OnInit 
 
   ngOnInit() {
     // find the first item in the array that has a value of false for canProceed, this is the current item.
-    // todo:?? and not disabled if they don't want to show disabled cards
     this.currentItem = this.data.find((item) => !item.canProceed);
 
     if (this.currentItem) {
@@ -44,15 +33,6 @@ export class NumberStepperBaseComponent extends BaseComponent implements OnInit 
       }
     }
   }
-
-  //  todo:?? set if's for the classes of the cards here based on config values
-  // setCardClasses(card: CardInputs, index: number) {
-  //   const config: CardConfigs = {
-  //     active: 'btn-primary',
-  //     disabled: 'btn-secondary',
-  //     current: 'btn-primary',
-  //     text: 'text-white',
-  //   };
 
   onCardClick(item: CardInputs) {
     if (!item.disabled) {
