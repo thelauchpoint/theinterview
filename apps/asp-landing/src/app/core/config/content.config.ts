@@ -4,36 +4,41 @@ import { ILandingPageStructure } from '@theinterview/xplat/core';
 
 // ILandingPageStructure
 export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
-  hero: {
-    super_script: 'AI-POWERED LEAD TARGETING TOOL',
-    h1: ' Unlimited Cold Outreach: Potential to 10x your sales',
-    paragraphs: [
-      `<p><i>Revolutionize your business with Accuserve Pro's Instant Data-Driven Lead isGeneratorFunction. Turn hours into second and leads into business.</i></p>`,
-    ],
-    image_url: null,
-    image_path: '/assets/images/Video 01.png',
-    ctas: [
-      {
-        text: '10x your Leads Today',
-        external_url: 'notsure.com',
-        internal_path: null,
-      },
-      {
-        text: 'Learn More',
-        external_url: null,
-        internal_path: '#anchor',
-      },
-      {
-        // pre_icon:null,
-        text: 'Our Zero Risk, Everything to Gain Guarentee',
-        external_url: null,
-        internal_path: '#anchor',
-        // suffix_icon:
-      },
-    ],
-  },
+
+  route:'', // is home (grab params match to route, display correct content). to make it seo worthy we'd have to do server side rendering and all the CTA and urls propigate correctly to index. Make sure a tax and href when need to.
+  
   sections: [
     {
+      template_name:'enum',//Kasey TODO
+      super_script: 'AI-POWERED LEAD TARGETING TOOL',
+      h1: ' Unlimited Cold Outreach: Potential to 10x your sales',
+      paragraphs: [
+        `<p><i>Revolutionize your business with Accuserve Pro's Instant Data-Driven Lead isGeneratorFunction. Turn hours into second and leads into business.</i></p>`,
+      ],
+      image_url: null,
+      image_path: '/assets/images/Video 01.png',
+      ctas: [
+        {
+          text: '10x your Leads Today',
+          external_url: 'notsure.com',
+          internal_path: null,
+        },
+        {
+          text: 'Learn More',
+          external_url: null,
+          internal_path: '#anchor',
+        },
+        {
+          // pre_icon:null,
+          text: 'Our Zero Risk, Everything to Gain Guarentee',
+          external_url: null,
+          internal_path: '#anchor',
+          // suffix_icon:
+        },
+      ],
+    },
+    {
+      template_name: 'enum here', // Kasey TODO
       h1: `Limited Prelaunch Slots Available`,
       copy: `<p>Take the leap today and become a part of our community with no upfront costs for the first 6 months. You'll gain access to 100 complimentary leads and receive a valuable business report, all at no charge. ($2,000 Value)</p>
       <p><i>Due to our commitment to personalized service and excellence, we only accept a select number of clients per season.</i></p>`,
@@ -53,7 +58,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
     },
     {
       h1: `Let's cut to the chase:`,
-      h2: 'Relying on unverified leads is time-consuming and costly for your business.',
+      h2: '<p>Relying on unverified leads is <u>time-consuming</u> and <u>costly</u> for your business.<p>',
       copy: `Revolutionize your business with AccuServe Pro's Instant Data-Driven Lead Generator: Turn hours into seconds and leads into business.`,
       columns: [
         {

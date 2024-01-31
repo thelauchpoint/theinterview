@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { AppBaseComponent, sectionTestimonialComponent } from '@theinterview/xplat/web/features';
-import { LANDING_CONTENT_CONFIG } from './core/config/content.config';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
+
+
 
 @Component({
-  selector: 'theinterview-root',
+  // eslint-disable-next-line @angular-eslint/component-selector
+  selector: 'body[root]',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [sectionTestimonialComponent, CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent extends AppBaseComponent {
-  title = 'asp-landing';
-  full_content = LANDING_CONTENT_CONFIG;
+export class AppComponent extends BaseComponent implements OnInit {
+
+  constructor( ) {
+
+  }
+
 }
