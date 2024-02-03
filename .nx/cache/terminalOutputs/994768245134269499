@@ -1,0 +1,169 @@
+[36m⠋[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: sealing)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m                                                 [2m | [22m[1mNames[22m                    [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mvendor.js[39m[37m                                                           [2m | [22mvendor                   [2m | [22m  [96m2.34 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mpolyfills.js[39m[37m                                                        [2m | [22mpolyfills                [2m | [22m[96m333.07 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mstyles.css, styles.js[39m[37m                                               [2m | [22mstyles                   [2m | [22m[96m230.99 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m                                                          [2m | [22mruntime                  [2m | [22m [96m12.67 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mmain.js[39m[37m                                                             [2m | [22mmain                     [2m | [22m  [96m9.00 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1m [22m                                                                   [2m | [22m[1mInitial Total[22m            [2m | [22m  [1m2.92 MB[22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1mLazy Chunk Files[22m                                                    [2m | [22m[1mNames[22m                    [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mapps_web-accuservpro-landing_src_app_features_home_home_module_ts.js[39m[37m[2m | [22mfeatures-home-home-module[2m | [22m  [96m1.20 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2024-02-03T20:22:59.493Z[39m[37m[22m - Hash: [1m[37mbe6d4943b9be61d4[39m[37m[22m - Time: [1m[37m3458[39m[37m[22mms[0m[39m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.ts[39m[31m[0m:[0m[93m2:0-56[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@accuservpro/xplat/core' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:10:2: Can't resolve '../../../../assets/landing/landing-main.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:138:2: Can't resolve '../../../../assets/landing/landing-2.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:198:2: Can't resolve '../../../../assets/landing/landing-3.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/web-accuservpro-landing/src/app/app.component.html[0m:[93m1[0m:[93m1[0m - [91merror[0m[90m NG8001: [0m'router-outlet' is not a known element:[39m[22m
+[1m[31m1. If 'router-outlet' is an Angular component, then verify[39m[22m[1m[31m that it is part of this module.[39m[22m
+[1m[31m2. If 'router-outlet' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m1[0m <router-outlet></router-outlet>[39m[22m
+[1m[31m[7m [0m [91m~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mapps/web-accuservpro-landing/src/app/app.component.ts[0m:[93m5[0m:[93m16[0m[39m[22m
+[1m[31m    [7m5[0m   templateUrl: './app.component.html',[39m[22m
+[1m[31m    [7m [0m [96m               ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    Error occurs in the template of component AppComponent.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/web-accuservpro-landing/src/app/features/home/components/home.component.ts[0m:[93m3[0m:[93m31[0m - [91merror[0m[90m TS2307: [0mCannot find module '@accuservpro/xplat/core' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m3[0m import { BaseComponent } from '@accuservpro/xplat/core';[39m[22m
+[1m[31m[7m [0m [91m                              ~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[37m[39m
+[37m** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[39m
+[37m[39m
+[37m[39m
+[37m[91m✖[39m[37m Failed to compile.[39m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m                                                 [2m | [22m[1mNames[22m                    [2m | [22m[1mRaw Size[22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m                                                          [2m | [22mruntime                  [2m | [22m[96m12.67 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1mLazy Chunk Files[22m                                                    [2m | [22m[1mNames[22m                    [2m | [22m[1mRaw Size[22m[0m[39m
+[37m[0m[92mapps_web-accuservpro-landing_src_app_features_home_home_module_ts.js[39m[37m[2m | [22mfeatures-home-home-module[2m | [22m [96m1.20 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m4 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2024-02-03T20:25:00.556Z[39m[37m[22m - Hash: [1m[37md472cab2066e0977[39m[37m[22m - Time: [1m[37m505[39m[37m[22mms[0m[39m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:10:2: Can't resolve '../../../../assets/landing/landing-main.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:138:2: Can't resolve '../../../../assets/landing/landing-2.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:198:2: Can't resolve '../../../../assets/landing/landing-3.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/web-accuservpro-landing/src/app/app.component.html[0m:[93m1[0m:[93m1[0m - [91merror[0m[90m NG8001: [0m'router-outlet' is not a known element:[39m[22m
+[1m[31m1. If 'router-outlet' is an Angular component, then verify that it is part of this module.[39m[22m
+[1m[31m2. If 'router-outlet' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m1[0m <router-outlet></router-outlet>[39m[22m
+[1m[31m[7m [0m [91m~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mapps/web-accuservpro-landing/src/app/app.component.[39m[22m[1m[31mts[0m:[93m5[0m:[93m16[0m[39m[22m
+[1m[31m    [7m5[0m   templateUrl: './app.component.html',[39m[22m
+[1m[31m    [7m [0m [96m               ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    Error occurs in the template of component AppComponent.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/web-accuservpro-landing/src/app/features/home/components/home.component.ts[0m:[93m10[0m:[93m36[0m - [91merror[0m[90m TS2552: [0mCannot find name 'BaseComponent'. Did you mean 'Component'?[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m10[0m export class HomeComponent extends BaseComponent implements AfterViewInit {[39m[22m
+[1m[31m[7m  [0m [91m                                   ~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[37m[39m
+[37m[91m✖[39m[37m Failed to compile.[39m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: sealing)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m                                                 [2m | [22m[1mNames[22m                    [2m | [22m[1mRaw Size[22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m                                                          [2m | [22mruntime                  [2m | [22m[96m12.67 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1mLazy Chunk Files[22m                                                    [2m | [22m[1mNames[22m                    [2m | [22m[1mRaw Size[22m[0m[39m
+[37m[0m[92mapps_web-accuservpro-landing_src_app_features_home_home_module_ts.js[39m[37m[2m | [22mfeatures-home-home-module[2m | [22m [96m1.20 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m4 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2024-02-03T20:25:13.029Z[39m[37m[22m - Hash: [1m[37m4f41ced6f4853d4c[39m[37m[22m - Time: [1m[37m330[39m[37m[22mms[0m[39m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:10:2: Can't resolve '../../../../assets/landing/landing-main.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:138:2: Can't resolve '../../../../assets/landing/landing-2.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:198:2: Can't resolve '../../../../assets/landing/landing-3.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/web-accuservpro-landing/src/app/app.component.html[0m:[93m1[0m:[93m1[0m - [91merror[0m[90m NG8001: [0m'router-outlet' is not a known element:[39m[22m
+[1m[31m1. If 'router-outlet' is an Angular component, then verify that it is part of this module.[39m[22m
+[1m[31m2. If 'router-outlet' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m1[0m <router-outlet></router-outlet>[39m[22m
+[1m[31m[7m [0m [91m~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mapps/web-accuservpro-landing/src/app/app.component.[39m[22m[1m[31mts[0m:[93m5[0m:[93m16[0m[39m[22m
+[1m[31m    [7m5[0m   templateUrl: './app.component.html',[39m[22m
+[1m[31m    [7m [0m [96m               ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    Error occurs in the template of component AppComponent.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[37m[39m
+[37m[91m✖[39m[37m Failed to compile.[39m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m                                                 [2m | [22m[1mNames[22m                    [2m | [22m[1mRaw Size[22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m                                                          [2m | [22mruntime                  [2m | [22m[96m12.67 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1mLazy Chunk Files[22m                                                    [2m | [22m[1mNames[22m                    [2m | [22m[1mRaw Size[22m[0m[39m
+[37m[0m[92mapps_web-accuservpro-landing_src_app_features_home_home_module_ts.js[39m[37m[2m | [22mfeatures-home-home-module[2m | [22m [96m1.20 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m4 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2024-02-03T20:25:31.625Z[39m[37m[22m - Hash: [1m[37ma1024110c7bb8871[39m[37m[22m - Time: [1m[37m347[39m[37m[22mms[0m[39m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:10:2: Can't resolve '../../../../assets/landing/landing-main.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:138:2: Can't resolve '../../../../assets/landing/landing-2.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule Error (from ./node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31m/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components/home.component.scss:198:2: Can't resolve '../../../../assets/landing/landing-3.png' in '/Users/kasey/code/theinterview/apps/web-accuservpro-landing/src/app/features/home/components'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/web-accuservpro-landing/src/app/app.component.html[0m:[93m1[0m:[93m1[0m - [91merror[0m[90m NG8001: [0m'router-outlet' is not a known element:[39m[22m
+[1m[31m1. If 'router-outlet' is an Angular component, then verify that it is part of this module.[39m[22m
+[1m[31m2. If 'router-outlet' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m1[0m <router-outlet></router-outlet>[39m[22m
+[1m[31m[7m [0m [91m~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mapps/web-accuservpro-landing/src/app/app.component.[39m[22m[1m[31mts[0m:[93m5[0m:[93m16[0m[39m[22m
+[1m[31m    [7m5[0m   templateUrl: './app.component.html',[39m[22m
+[1m[31m    [7m [0m [96m               ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    Error occurs in the template of component AppComponent.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[37m[39m
+[37m[91m✖[39m[37m Failed to compile.[39m

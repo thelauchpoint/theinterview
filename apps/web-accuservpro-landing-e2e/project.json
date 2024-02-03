@@ -1,0 +1,33 @@
+{
+  "name": "web-accuservpro-landing-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/web-accuservpro-landing-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/web-accuservpro-landing-e2e/cypress.config.ts",
+        "devServerTarget": "web-accuservpro-landing:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "web-accuservpro-landing:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "web-accuservpro-landing:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/web-accuservpro-landing-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["web-accuservpro-landing"]
+}
