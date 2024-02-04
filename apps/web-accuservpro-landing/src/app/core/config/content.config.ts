@@ -1,11 +1,8 @@
-// import { ILandingPageStructure } from '@theinterview/xplat/web/features';
 
-import { ILandingPageStructure } from '@theinterview/xplat/core';
+import { ILandingPageStructure } from "./content.interface";
 
-// ILandingPageStructure
+
 export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
-  route: '', // is home (grab params match to route, display correct content). to make it seo worthy we'd have to do server side rendering and all the CTA and urls propigate correctly to index. Make sure a tax and href when need to.
-
   sections: [
     {
       super_script: 'AI-POWERED LEAD TARGETING TOOL',
@@ -16,7 +13,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       ctas: [
         {
           text: '10x your Leads Today',
-          external_url: 'notsure.com',
+          external_url: 'https://accuservicepro.typeform.com/free-leads',
           internal_path: null,
         },
         {
@@ -37,19 +34,25 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       h1: `Limited Prelaunch Slots Available`,
       copy: `<p>Take the leap today and become a part of our community with no upfront costs for the first 6 months. You'll gain access to 100 complimentary leads and receive a valuable business report, all at no charge. ($2,000 Value)</p>
       <p><i>Due to our commitment to personalized service and excellence, we only accept a select number of clients per season.</i></p>`,
-      cta_text: 'Sign up Now!',
+      ctas: [
+        {
+          text: 'Sign up Now!',
+          external_url: 'https://accuservicepro.typeform.com/free-leads',
+          internal_path: null,
+        },
+      ],
     },
     {
       image_url: null,
       image_path: null,
       copy: `Why is lead generation crucial? It's simple. Without leads, there are no sales; without sales, there's no revenue; and without revenue, growth is just a distant dream. But with AccuRoof, you're not just dreaming of growth; you're actively pursuing it.`,
-      signature: '@CEO-ROB STADNICK',
+      sub_script: '@CEO-ROB STADNICK',
     },
     {
       image_url: null,
       image_path: null,
       copy: `“We're not just another market player; our goal is to bridge the gaps in the industry’s lead generation. Our focus is on converting industry challenges into strengths. We're changing the game, transforming what was once missing in the industry into your greatest strength.”`,
-      signature: '@head of product - Trevor AMbler',
+      sub_script: '@head of product - Trevor AMbler',
     },
     {
       h1: `Let's cut to the chase:`,
@@ -59,34 +62,46 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
         {
           image_url: null,
           image_path: '/assets/images/ICON2.png',
-          h3: `Smart Outreach`,
+          h1: `Smart Outreach`,
           copy: `Arm yourself with crucial data and insights about your prospects to ensure a more personalized and effective communication when you make that initial contact`,
         },
         {
           image_url: null,
           image_path: '/assets/images/ICON.png',
-          h3: `Algorithms based on YOUR data`,
+          h1: `Algorithms based on YOUR data`,
           copy: `Imagine a data scientist dedicated to your business needs, but with the speed and efficiency of AI. Our algorithms customize to your data, offering smart, adaptive strategies.`,
         },
         {
           image_url: null,
           image_path: '/assets/images/ICON3.png',
-          h3: `The leads are exclusively yours for 8 months`,
+          h1: `The leads are exclusively yours for 8 months`,
           copy: `Revolutionize your business with AccuServe Pro's Instant Data-Driven Lead Generator: Turn hours into seconds and leads into business. `,
         },
       ],
-      cta_text: 'Sign up Now!',
+      ctas: [
+        {
+          text: 'Sign up Now!',
+          external_url: 'https://accuservicepro.typeform.com/free-leads',
+          internal_path: null,
+        },
+      ],
     },
     {
       super_script: 'Be at the Forefront: Embrace Market Innovation',
       h1: `<p>Join the revolution with a tool that's <u>reshaping market</u> efficiency <u>standards.</u> </p>  `,
       image_url: null,
       image_path: `/assets/images/ASP Arrow.svg`,
-      cta_text: '10x your leads today',
+      ctas: [
+        {
+          text: '10x your leads today',
+          external_url: 'https://accuservicepro.typeform.com/free-leads',
+          internal_path: null,
+        },
+      ],
     },
     {
       h1: 'Eliminate Cold Lead Hunting:',
-      h1_style_text: 'Heres How',
+      h2: 'Heres How',
     },
     {
       h2: `Step 1: Upload Your Historical Quotes and Jobs`,
@@ -142,84 +157,96 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       columns: [
         {
           image_path: null,
-          header: `Dive into untapped markets`,
+          h1: `Dive into untapped markets`,
           copy: `Identify high-potential areas and know where to focus efforts, streamlining your sales strategy and saving your team from chasing less promising leads.`,
         },
         {
           image_path: null,
-          header: `Connect with your CRM`,
+          h1: `Connect with your CRM`,
           copy: `Get real-time updates directly from your CRM whenever your have a new lead. This seamless connection ensures that you stay on top of every task`,
         },
         {
           image_path: null,
-          header: `View analytics and performance`,
+          h1: `View analytics and performance`,
           copy: `Enhance business decision-making with our analytics and performance tracking services. Discover valuable insights and optimize your strategies for superior results with our expert data analysis and reporting.`,
         },
       ],
     },
     {
       h1: `While your competitors are calculating risks, you're calculating revenue`,
-      cta_text: 'Sign me up!',
+      ctas: [
+        {
+          text: 'Sign me up!',
+          external_url: 'https://accuservicepro.typeform.com/free-leads',
+          internal_path: null,
+        },
+      ],
     },
     {
       h1: `Are you...`,
-      h2:'Wondering if this fits your needs? Allow us to check every box for you.',
-      table_copy:[
+      h2: 'Wondering if this fits your needs? Allow us to check every box for you.',
+      table_copy: [
         {
-          h1:`Fed up with Cold Calling?`,
-          cells:[
+          h1: `Fed up with Cold Calling?`,
+          cells: [
             {
-              h1:'Prospect Insight',
-              copy:'gives Vital Data for More Effective and Personalized Initial Communications',
+              h1: 'Prospect Insight',
+              copy: 'gives Vital Data for More Effective and Personalized Initial Communications',
             },
             {
-              h1:'Lead Scoring',
-              copy:'Prioritizing Prospects through Data-Driven Ranking',
+              h1: 'Lead Scoring',
+              copy: 'Prioritizing Prospects through Data-Driven Ranking',
             },
             {
-              h1:'Daily Targets',
-              copy:'streamline your outreach process, focusing your efforts where they count the most',
-            }
-          ]
+              h1: 'Daily Targets',
+              copy: 'streamline your outreach process, focusing your efforts where they count the most',
+            },
+          ],
         },
         {
-          h1:`Over the hunt of finding data on clients?`,
-          cells:[
+          h1: `Over the hunt of finding data on clients?`,
+          cells: [
             {
-              h1:'Comprehensive Data Aggregation ',
-              copy:'that compiles lead data from multiple sources',
+              h1: 'Comprehensive Data Aggregation ',
+              copy: 'that compiles lead data from multiple sources',
             },
             {
-              h1:'Real-time Data Syncing ',
-              copy:'to keep client information up-to-date',
+              h1: 'Real-time Data Syncing ',
+              copy: 'to keep client information up-to-date',
             },
             {
-              h1:'Custom Data Filters',
-              copy:'that allow you to sort and prioritize leads based on specific criteria',
-            }
-          ]
+              h1: 'Custom Data Filters',
+              copy: 'that allow you to sort and prioritize leads based on specific criteria',
+            },
+          ],
         },
         {
-          h1:`Frustrated by Spending Resources on Dead-End Leads?`,
-          cells:[
+          h1: `Frustrated by Spending Resources on Dead-End Leads?`,
+          cells: [
             {
-              h1:'Personalized Data Driven Leads',
-              copy:'Precisely Matching Prospects to Your Unique Specifications',
+              h1: 'Personalized Data Driven Leads',
+              copy: 'Precisely Matching Prospects to Your Unique Specifications',
             },
             {
-              h1:'Lead Quality Assessments ',
-              copy:'to forecast potential value',
+              h1: 'Lead Quality Assessments ',
+              copy: 'to forecast potential value',
             },
             {
-              h1:'ROI Tracking Dashboard ',
-              copy:'to monitor the profitability of pursued leads',
-            }
-          ]
-        }
-       
+              h1: 'ROI Tracking Dashboard ',
+              copy: 'to monitor the profitability of pursued leads',
+            },
+          ],
+        },
       ],
-      sub_copy:'Stop wasting time, start saving it',
-      cta_text:'Sign me up!'
+      sub_script: 'Stop wasting time, start saving it',
+
+      ctas: [
+        {
+          text: 'Sign me up!',
+          external_url: 'https://accuservicepro.typeform.com/free-leads',
+          internal_path: null,
+        },
+      ],
     },
     {
       h1: 'Lets do the math...',
@@ -248,7 +275,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       ],
       image_url: null,
       image_path: null,
-      sub_copy: `These are estimates. Real-world results could lead to even more
+      sub_script: `These are estimates. Real-world results could lead to even more
       doors opening and success stories.`,
     },
     {
@@ -257,17 +284,13 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       copy: `Don't miss out on this opportunity to experience the future of AccuServe Pro without any cost. Act now and secure your spot in our pre-launch program!`,
       ctas: [
         {
-          type: 'link',
           text: ' Our Guarentee',
-          suffix_icon: '',
-          external_url: 'notsure.com',
-          internal_path: null,
+          external_url: null,
+          internal_path: '#guarentee',
         },
         {
-          type: 'button',
           text: 'Sign me up!',
-          suffix_icon: null,
-          external_url: 'notsure.com',
+          external_url: 'https://accuservicepro.typeform.com/free-leads',
           internal_path: null,
         },
       ],
@@ -280,11 +303,11 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
         You can back out at any time, and keep all the leads- consider them a gift for your efforts. 
         
         This is more than a guarantee; its a challenge. A challenge to elevate your business, risk-free. What do you have to loose? `,
-      cta: [
+      ctas: [
         {
-          type: 'link',
-          external_url: 'notsure.com',
-          internal_path: null,
+          text: 'Terms & Conditions',
+          external_url: null,
+          internal_path: '/tos',
         },
       ],
       image_url: null,
