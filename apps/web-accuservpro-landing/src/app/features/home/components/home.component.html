@@ -38,7 +38,7 @@
 </div>
   Hero
 
-<section-hero></section-hero>
+<section-hero [data]="full_content.sections[0]"></section-hero>
 
   <!-- Hero goes here -->
   <!-- <pre [innerHTML]="full_content.sections[0] | json"></pre> -->
@@ -53,8 +53,8 @@
     <!-- testimonials -->
     <!-- Section 1 -->
     <!-- Section 2 -->
-    <!-- <section-quote-01 [data]="full_content.sections[2]"></section-quote-01>
-    <section-quote-01 [data]="full_content.sections[3]"></section-quote-01> -->
+    <section-quote-01 [data]="full_content.sections[2]"></section-quote-01>
+    <section-quote-01 [data]="full_content.sections[3]"></section-quote-01>
   </div>
 
   <!-- Section 3 -->

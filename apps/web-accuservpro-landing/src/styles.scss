@@ -1,14 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* You can add global styles to this file, and also import other style files */
 @import 'scss/variables'; // import first so the variables take effect on the other parts below
 @import 'scss/index';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "tailwindcss/base";
+@import 'tailwindcss/base';
 
-@import "tailwindcss/components";
+@import 'tailwindcss/components';
 
-@import "tailwindcss/utilities";
-
-// @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
+@import 'tailwindcss/utilities';

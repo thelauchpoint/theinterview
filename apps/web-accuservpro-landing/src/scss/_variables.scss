@@ -90,3 +90,11 @@ $text-dark: $dark-75;
 $text-muted: $gray-500;
 
 $transition: all 0.15s ease !default; // Custom variable
+
+
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
