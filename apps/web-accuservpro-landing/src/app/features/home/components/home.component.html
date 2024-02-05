@@ -1,87 +1,81 @@
-<div>
-  Myellow
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="/assets/images/bootstrap-solid.svg" width="30" height="30" alt="" />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
+<div class="bg-black">
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/images/bootstrap-solid.svg" width="30" height="30" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- TODO: Navbar use bootstrap as basis, responsive built in -->
+  </div>
+  <div class="body container">
+    <!-- todo: Hero section needs flex split into two sections, hero img on the right and content on the left -->
+    <div></div>
+
+    <section-hero [data]="full_content.sections[0]"></section-hero>
+
+    <!-- Hero goes here -->
+    <!-- <pre [innerHTML]="full_content.sections[0] | json"></pre> -->
+
+    <!-- Sections start -->
+    <!-- THE Section COUNT -->
+    <!-- {{ full_content.sections.length }} -->
+    <!-- Section0 -->
+    <!-- <pre [innerHTML]="full_content.sections[0] | json"></pre> -->
+
+    <div class="row">
+      <!-- testimonials -->
+      <!-- Section 1 -->
+      <!-- Section 2 -->
+      <!-- <section-quote-01 [data]="full_content.sections[2]"></section-quote-01>
+    <section-quote-01 [data]="full_content.sections[3]"></section-quote-01> -->
     </div>
-  </nav>
-  <!-- TODO: Navbar use bootstrap as basis, responsive built in -->
-</div>
-<div class="body container">
-  <!-- todo: Hero section needs flex split into two sections, hero img on the right and content on the left -->
-<div>
-  
-</div>
-  Hero
 
-<section-hero [data]="full_content.sections[0]"></section-hero>
-
-  <!-- Hero goes here -->
-  <!-- <pre [innerHTML]="full_content.sections[0] | json"></pre> -->
-
-  <!-- Sections start -->
-  <!-- THE Section COUNT -->
-  <!-- {{ full_content.sections.length }} -->
-  <!-- Section0 -->
-  <!-- <pre [innerHTML]="full_content.sections[0] | json"></pre> -->
-
-  <div class="row">
-    <!-- testimonials -->
-    <!-- Section 1 -->
-    <!-- Section 2 -->
-    <section-quote-01 [data]="full_content.sections[2]"></section-quote-01>
-    <section-quote-01 [data]="full_content.sections[3]"></section-quote-01>
+    <!-- Section 3 -->
+    <!-- Section 4 -->
+    <!-- Section 5 -->
+    <!-- Section 6 -->
+    <!-- Section 7 -->
+    <!-- Section 8 -->
+    <!-- Section 9 -->
+    <!-- Section 10 -->
+    <!-- Section 11-->
+    <!-- Section 12 -->
+    <!-- Section 13 -->
+    <!-- Section 14 -->
+    <!-- Section 15-->
+    <!-- Section 16-->
+    <!-- Section 17-->
+    <!-- Section 18-->
+    <!-- <pre [innerHTML]="full_content.sections[18] | json"></pre> -->
   </div>
 
-  <!-- Section 3 -->
-  <!-- Section 4 -->
-  <!-- Section 5 -->
-  <!-- Section 6 -->
-  <!-- Section 7 -->
-  <!-- Section 8 -->
-  <!-- Section 9 -->
-  <!-- Section 10 -->
-  <!-- Section 11-->
-  <!-- Section 12 -->
-  <!-- Section 13 -->
-  <!-- Section 14 -->
-  <!-- Section 15-->
-  <!-- Section 16-->
-  <!-- Section 17-->
-  <!-- Section 18-->
-  <!-- <pre [innerHTML]="full_content.sections[18] | json"></pre> -->
-</div>
+  <!-- <div>TODO: Footer</div> -->
 
-<!-- <div>TODO: Footer</div> -->
-
-<!-- the full data config -->
-<!-- <pre [innerHTML]="full_content | json"></pre>
+  <!-- the full data config -->
+  <!-- <pre [innerHTML]="full_content | json"></pre>
    -->
-
-
-
-   
+</div>

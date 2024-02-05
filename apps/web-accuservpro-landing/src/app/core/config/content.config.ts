@@ -9,7 +9,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
   sections: [
     {
       super_script: 'AI-POWERED LEAD TARGETING TOOL',
-      h1: ' Unlimited Cold Outreach: Potential to 10x your sales',
+      h1: ' Unlimited Cold Outreach: <br/> Potential to 10x your sales',
       copy: `<p>Revolutionize your business with Accuserve Pro's Instant Data-Driven Lead isGeneratorFunction. Turn hours into second and leads into business.</p>`,
       image_url: null,
       image_path: '/assets/images/HERO.png',
