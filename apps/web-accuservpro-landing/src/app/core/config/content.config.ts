@@ -7,6 +7,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
   route: '', // is home (grab params match to route, display correct content). to make it seo worthy we'd have to do server side rendering and all the CTA and urls propigate correctly to index. Make sure a tax and href when need to.
 
   sections: [
+    // 0
     {
       super_script: 'AI-POWERED LEAD TARGETING TOOL',
       h1: ' Unlimited Cold Outreach: <br/> Potential to 10x your sales',
@@ -33,27 +34,31 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
         },
       ],
     },
+    // 1
     {
       h1: `Limited Prelaunch Slots Available`,
       copy: `<p>Take the leap today and become a part of our community with no upfront costs for the first 6 months. You'll gain access to 100 complimentary leads and receive a valuable business report, all at no charge. ($2,000 Value)</p>
       <p><i>Due to our commitment to personalized service and excellence, we only accept a select number of clients per season.</i></p>`,
       cta_text: 'Sign up Now!',
     },
+    // 2
     {
       image_url: null,
       image_path: null,
       copy: `Why is lead generation crucial? It's simple. Without leads, there are no sales; without sales, there's no revenue; and without revenue, growth is just a distant dream. But with AccuRoof, you're not just dreaming of growth; you're actively pursuing it.`,
       signature: '@CEO-ROB STADNICK',
     },
+    // 3
     {
       image_url: null,
       image_path: null,
       copy: `“We're not just another market player; our goal is to bridge the gaps in the industry’s lead generation. Our focus is on converting industry challenges into strengths. We're changing the game, transforming what was once missing in the industry into your greatest strength.”`,
       signature: '@head of product - Trevor AMbler',
     },
+    // 4
     {
       h1: `Let's cut to the chase:`,
-      h2: '<p>Relying on unverified leads is <u>time-consuming</u> and <u>costly</u> for your business.<p>',
+      h2: '<p>Relying on unverified leads is <u>time-consuming</u> <br> and <u>costly</u> for your business.<p>',
       copy: `Revolutionize your business with AccuServe Pro's Instant Data-Driven Lead Generator: Turn hours into seconds and leads into business.`,
       columns: [
         {
@@ -77,6 +82,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       ],
       cta_text: 'Sign up Now!',
     },
+    // 5
     {
       super_script: 'Be at the Forefront: Embrace Market Innovation',
       h1: `<p>Join the revolution with a tool that's <u>reshaping market</u> efficiency <u>standards.</u> </p>  `,
@@ -84,17 +90,20 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       image_path: `/assets/images/ASP Arrow.svg`,
       cta_text: '10x your leads today',
     },
+    // 6
     {
       h1: 'Eliminate Cold Lead Hunting:',
       h1_style_text: 'Heres How',
     },
+    // 7
     {
-      h2: `Step 1: Upload Your Historical Quotes and Jobs`,
+      h1: `Step 1: Upload Your Historical Quotes and Jobs`,
       copy: `<p>Start winning now. Upload your quote and job history and let our software dissect your wins and misses to prime your pipeline with leads that convert. <span class="text-success">The more quotes provided, the better accuracy we have for future leads.</span></p>`,
       image_url: null,
       image_path: '/assets/images/step1.png',
       image_side: 'right', // change to enum
     },
+    // 8
     {
       h1: `Step 2: Receive a Tailored Business Report`,
       copy: `<p>Insight, not data dumps. Our tailored report cuts through the noise to hand you actionable strategies straight from your own success playbook</p>`,
@@ -102,6 +111,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       image_path: '/assets/images/step2.png',
       image_side: 'left', // change to enum
     },
+    // 9
     {
       h1: `Step 3: Generate More Leads with Custom AI Insights`,
       copy: `<p>Sales slumps? Not here. Our custom AI insights tool digs into data, revealing the hottest leads, so you can chase deals, not dead ends</p> <p class="text-success">*The leads are exclusively yours for 8 months</p>`,
@@ -109,6 +119,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       image_path: '/assets/images/step3.png',
       image_side: 'right', // change to enum
     },
+    // 10
     {
       h1: `Step 4: Set up your daily targets`,
       copy: `Goodbye, cold calls. Hello, warm welcomes. We automate initial contact with the finesse of your top sales rep—personalized, persistent, profitable.`,
@@ -116,6 +127,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       image_path: '/assets/images/step4.png',
       image_side: 'left', // change to enum
     },
+    // 11
     {
       h1: `Step 5: Let us help you turn your cold leads, hot`,
       copy: `Stay in the zone. Our system spots the warm-up and pings you to swoop in at the perfect moment. Your time is for closing, not guessing.`,
@@ -123,6 +135,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       image_path: '/assets/images/step5.png',
       image_side: 'right', // change to enum
     },
+    // 12
     {
       h1: `Step 6: Review and Adjust`,
       copy: 'Regularly review the overall performance and use the insights gained to refine your approach. This final step is crucial for continuous improvement and achieving long-term success.',
@@ -130,6 +143,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       image_path: '/assets/images/step6.png',
       image_side: 'left', // change to enum
     },
+    // 13
     {
       h1: `Step 7: Rinse & Repeat`,
       copy: `Scale fast. Buy more leads. Repeat success. Our AI sharpens with every cycle, turning your sales process into a revenue-generating machine that never sleeps`,
@@ -137,6 +151,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       image_path: '/assets/images/step7.png',
       image_side: 'right', // change to enum
     },
+    // 14
     {
       h1: `& More`,
       columns: [
@@ -157,10 +172,12 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
         },
       ],
     },
+    // 15
     {
       h1: `While your competitors are calculating risks, you're calculating revenue`,
       cta_text: 'Sign me up!',
     },
+    // 16
     {
       h1: `Are you...`,
       h2:'Wondering if this fits your needs? Allow us to check every box for you.',
@@ -221,6 +238,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       sub_copy:'Stop wasting time, start saving it',
       cta_text:'Sign me up!'
     },
+    // 17
     {
       h1: 'Lets do the math...',
       copy: 'We want you to multiply your conversions, minimize rejections, and maximize every minute',
@@ -251,6 +269,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
       sub_copy: `These are estimates. Real-world results could lead to even more
       doors opening and success stories.`,
     },
+    // 18
     {
       h1: 'Exclusive Pre-Launch Benefits',
       h2: 'Enjoy 6 Months of Complimentary Access',
@@ -272,6 +291,7 @@ export const LANDING_CONTENT_CONFIG: ILandingPageStructure = {
         },
       ],
     },
+    // 19
     {
       super_script: '100% MONEY BACK',
       h1: 'Six Month Power Guarentee',

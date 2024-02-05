@@ -1,0 +1,13 @@
+<div class="mt-8 text-center">
+  <h1 class="text-primary font-bold">{{ data.h1 }}</h1>
+  <h2 class="text-white" [innerHTML]="data.h2"></h2>
+</div>
+
+<!-- loop through list and grid -->
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+  <div *ngFor="let item of data.columns">
+    <img src="{{ item.image_path }}" alt="" />
+    <h3 class="text-center text-white">{{ item.h3 }}</h3>
+    <p>{{ item.copy }}</p>
+  </div>
+</div>
