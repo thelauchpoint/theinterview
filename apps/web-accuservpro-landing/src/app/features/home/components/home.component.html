@@ -1,4 +1,5 @@
-<div>
+<div class="bg-black">
+  <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">
         <img src="/assets/images/bootstrap-solid.svg" width="30" height="30" alt="" />
@@ -31,24 +32,42 @@
     <!-- TODO: Navbar use bootstrap as basis, responsive built in -->
   </div>
   <div class="body container">
+    <!-- todo: Hero section needs flex split into two sections, hero img on the right and content on the left -->
+
+    <!-- START: Hero  -->
+    <section-hero [data]="full_content.sections[0]"></section-hero>
+
     <!-- Hero goes here -->
-    <!-- <pre [innerHTML]="full_content.hero | json"></pre> -->
+    <!-- <pre [innerHTML]="full_content.sections[0] | json"></pre> -->
+
     <!-- Sections start -->
     <!-- THE Section COUNT -->
     <!-- {{ full_content.sections.length }} -->
     <!-- Section0 -->
     <!-- <pre [innerHTML]="full_content.sections[0] | json"></pre> -->
-  
-    <div class="row">
+
+    <!-- START: Prelaunch -->
+    <prelaunch-slots [data]="full_content.sections[1]"></prelaunch-slots>
+    <div class="d-flex justify-content-between gap-8">
+      <!-- testimonials -->
       <!-- Section 1 -->
-      <!-- Section 2 -->
       <section-quote-01 [data]="full_content.sections[2]"></section-quote-01>
+      <!-- Section 2 -->
       <section-quote-01 [data]="full_content.sections[3]"></section-quote-01>
     </div>
-  
+
     <!-- Section 3 -->
+    <!-- Start: cut to chase -->
+    <cut-to-chase [data]="full_content.sections[4]"></cut-to-chase>
     <!-- Section 4 -->
+    <!-- accuservice -->
+    <accuservice [data]="full_content.sections[5]"></accuservice>
     <!-- Section 5 -->
+    <!-- step -->
+    <div class="mt-8 text-center">
+      <h1 class="text-primary font-bold" [innerHTML]="full_content.sections[6].h1"></h1>
+      <h1 class="text-primary font-bold" [innerHTML]="full_content.sections[6].h1_style_text"></h1>
+    </div>
     <!-- Section 6 -->
     <!-- Section 7 -->
     <!-- Section 8 -->
@@ -57,17 +76,28 @@
     <!-- Section 11-->
     <!-- Section 12 -->
     <!-- Section 13 -->
+    <section-step [data]="full_content.sections[7]"></section-step>
+    <section-step [data]="full_content.sections[8]"></section-step>
+    <section-step [data]="full_content.sections[9]"></section-step>
+    <section-step [data]="full_content.sections[10]"></section-step>
+    <section-step [data]="full_content.sections[11]"></section-step>
+    <section-step [data]="full_content.sections[12]"></section-step>
+    <section-step [data]="full_content.sections[13]"></section-step>
+
     <!-- Section 14 -->
+    <!-- &more -->
+    <section-more [data]="full_content.sections[14]"></section-more>
     <!-- Section 15-->
+<section-competitors-calculate [data]="full_content.sections[15]"></section-competitors-calculate>
     <!-- Section 16-->
     <!-- Section 17-->
     <!-- Section 18-->
     <!-- <pre [innerHTML]="full_content.sections[18] | json"></pre> -->
-  
   </div>
-  
-  <div>TODO: Footer</div>
-  
+
+  <!-- <div>TODO: Footer</div> -->
+
   <!-- the full data config -->
-  <!-- <pre [innerHTML]="full_content | json"></pre> -->
-  
+  <!-- <pre [innerHTML]="full_content | json"></pre>
+   -->
+</div>
