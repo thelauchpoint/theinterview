@@ -35,6 +35,7 @@
     <!-- todo: Hero section needs flex split into two sections, hero img on the right and content on the left -->
     <div></div>
 
+    <!-- START: Hero  -->
     <section-hero [data]="full_content.sections[0]"></section-hero>
 
     <!-- Hero goes here -->
@@ -46,12 +47,14 @@
     <!-- Section0 -->
     <!-- <pre [innerHTML]="full_content.sections[0] | json"></pre> -->
 
-    <div class="row">
+    <!-- START: Prelaunch -->
+    <prelaunch-slots [data]="full_content.sections[1]"></prelaunch-slots>
+    <div class="d-flex justify-content-between gap-8">
       <!-- testimonials -->
       <!-- Section 1 -->
       <!-- Section 2 -->
-      <!-- <section-quote-01 [data]="full_content.sections[2]"></section-quote-01>
-    <section-quote-01 [data]="full_content.sections[3]"></section-quote-01> -->
+      <section-quote-01 [data]="full_content.sections[2]"></section-quote-01>
+    <section-quote-01 [data]="full_content.sections[3]"></section-quote-01>
     </div>
 
     <!-- Section 3 -->
