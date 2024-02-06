@@ -1,0 +1,22 @@
+<!-- <div [innerHTML]="data.copy"></div> -->
+
+<section class="overflow-hidden rounded-lg bg-slate-950">
+  <div class="sm:p-6 align-middle justify-center text-center mx-60">
+    <h1 class="font-bold text-white">{{ data.h1 }}</h1>
+
+    <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500" [innerHTML]="data.copy"></p>
+
+    <a
+      href="#"
+      class="mt-8 font-bold inline-block rounded bg-primary px-12 py-3 text-sm text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+    >
+      {{ data.cta_text }}
+    </a>
+  </div>
+</section>
+
+<!-- todo: 
+  
+- copy with primary text bolded where needed
+- margins mobile friendly 
+-->

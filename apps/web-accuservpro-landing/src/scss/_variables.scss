@@ -1,0 +1,100 @@
+// app specific variables
+// app specific variables
+
+// Theme colors
+$white: #ffffff;
+$gray-body-background: #eef0f8;
+$gray-100: #f3f6f9;
+$gray-200: #ebedf3;
+$gray-300: #e4e6ef;
+$gray-400: #d1d3e0;
+$dark-25: $gray-400;
+$gray-500: #b5b5c3;
+$gray-600: #7e8299;
+$dark-50: $gray-600;
+$gray-700: #5e6278;
+$dark-65: $gray-700;
+$gray-800: #3f4254;
+$dark-75: $gray-800;
+$gray-900: #181c32;
+$dark: $gray-900;
+$dark-hover: #171b30;
+
+$black: #000104;
+
+// Primary
+$primary: #FAD502;
+// $primary-half:#E5CC7F;
+// $primary-light: #f5ead0;
+// $primary-active: #c9a537;
+// $primary-light-dark: #E5CC7F;
+// $primary-inverse: #ffffff;
+
+// $primary-100: #faf4e7;
+// $primary-200: #f1e4c4;
+// $primary-300: #e9d3a0;
+// $primary-400: #d9b358;
+// $primary-500: $primary;
+// $primary-600: #b4830f;
+// $primary-700: #b4820c;
+// $primary-hover: $primary-700;
+// $primary-900: #624808;
+// secondary: 
+// $secondary: #181c32;
+// $secondary-hover: #d8dbe8;
+// $secondary-inverse: #ffffff;
+//light
+// $light:#E4E6EF;
+// $light-active:#B5B5C3;
+// Success
+$success: #8FC840;
+// $success-light: #f1fcf6;
+// $success-hover: #32a115;
+// $success-active: #177609;
+// $success-light-dark: #c8f69e;
+// $success-inverse: #c8f69e;
+
+// Info
+$info: #287FB8;
+// $info-active: #2e95d5;
+// $info-light: #b2f4fe;
+// $info-light-dark: #b2f4fe;
+// $info-inverse: #b2f4fe;
+
+// Danger
+$danger: #e22b2b;
+$danger-light: #fdf4f4;
+$danger-hover: #c94623;
+$danger-active: #b02028;
+$danger-light-dark: #fac2ab;
+$danger-inverse: #fac2ab;
+
+// Warning
+$warning: #fca800;
+$warning-light: #fffaf2;
+$warning-hover: #ff7844;
+$warning-active: #ce3c1b;
+$warning-light-dark: #fdcfa7;
+$warning-inverse: #fdcfa7;
+
+$border-radius-sm: 0.3rem;
+$border-radius: 0.65rem;
+$border-radius-lg: 0.85rem;
+$border-radius-xl: 1.25rem;
+
+// Card Box Shadow
+$card-box-shadow: 0px 0px 20px 0px rgba(76, 87, 125, 0.02);
+$card-box-shadow-dark: 0px 0px 20px 0px rgba(76, 87, 125, 0.02);
+
+$text-dark: $dark-75;
+$text-muted: $gray-500;
+
+$transition: all 0.15s ease !default; // Custom variable
+
+
+
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";

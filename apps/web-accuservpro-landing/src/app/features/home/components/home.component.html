@@ -1,0 +1,103 @@
+<div class="bg-black">
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/images/bootstrap-solid.svg" width="30" height="30" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- TODO: Navbar use bootstrap as basis, responsive built in -->
+  </div>
+  <div class="body container">
+    <!-- todo: Hero section needs flex split into two sections, hero img on the right and content on the left -->
+
+    <!-- START: Hero  -->
+    <section-hero [data]="full_content.sections[0]"></section-hero>
+
+    <!-- Hero goes here -->
+    <!-- <pre [innerHTML]="full_content.sections[0] | json"></pre> -->
+
+    <!-- Sections start -->
+    <!-- THE Section COUNT -->
+    <!-- {{ full_content.sections.length }} -->
+    <!-- Section0 -->
+    <!-- <pre [innerHTML]="full_content.sections[0] | json"></pre> -->
+
+    <!-- START: Prelaunch -->
+    <prelaunch-slots [data]="full_content.sections[1]"></prelaunch-slots>
+    <div class="d-flex justify-content-between gap-8">
+      <!-- testimonials -->
+      <!-- Section 1 -->
+      <section-quote-01 [data]="full_content.sections[2]"></section-quote-01>
+      <!-- Section 2 -->
+      <section-quote-01 [data]="full_content.sections[3]"></section-quote-01>
+    </div>
+
+    <!-- Section 3 -->
+    <!-- Start: cut to chase -->
+    <cut-to-chase [data]="full_content.sections[4]"></cut-to-chase>
+    <!-- Section 4 -->
+    <!-- accuservice -->
+    <accuservice [data]="full_content.sections[5]"></accuservice>
+    <!-- Section 5 -->
+    <!-- step -->
+    <div class="mt-8 text-center">
+      <h1 class="text-primary font-bold" [innerHTML]="full_content.sections[6].h1"></h1>
+      <h1 class="text-primary font-bold" [innerHTML]="full_content.sections[6].h1_style_text"></h1>
+    </div>
+    <!-- Section 6 -->
+    <!-- Section 7 -->
+    <!-- Section 8 -->
+    <!-- Section 9 -->
+    <!-- Section 10 -->
+    <!-- Section 11-->
+    <!-- Section 12 -->
+    <!-- Section 13 -->
+    <section-step [data]="full_content.sections[7]"></section-step>
+    <section-step [data]="full_content.sections[8]"></section-step>
+    <section-step [data]="full_content.sections[9]"></section-step>
+    <section-step [data]="full_content.sections[10]"></section-step>
+    <section-step [data]="full_content.sections[11]"></section-step>
+    <section-step [data]="full_content.sections[12]"></section-step>
+    <section-step [data]="full_content.sections[13]"></section-step>
+
+    <!-- Section 14 -->
+    <!-- &more -->
+    <section-more [data]="full_content.sections[14]"></section-more>
+    <!-- Section 15-->
+<section-competitors-calculate [data]="full_content.sections[15]"></section-competitors-calculate>
+    <!-- Section 16-->
+    <!-- Section 17-->
+    <!-- Section 18-->
+    <!-- <pre [innerHTML]="full_content.sections[18] | json"></pre> -->
+  </div>
+
+  <!-- <div>TODO: Footer</div> -->
+
+  <!-- the full data config -->
+  <!-- <pre [innerHTML]="full_content | json"></pre>
+   -->
+</div>

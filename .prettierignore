@@ -17,3 +17,4 @@
 **/apps/*nativescript/src/assets/*.css
 **/libs/xplat/nativescript/scss/src/lib/fonticons/*.css
 **/libs/xplat/nativescript*/plugins/**/*
+.angular

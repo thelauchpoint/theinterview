@@ -1,0 +1,19 @@
+<div class="mt-8 d-flex flex-column justify-content-center">
+  <div class="my-8 text-center">
+    <h6 class="text-primary">{{ data.super_script }}</h6>
+
+    <h1 class="text-primary font-bold" [innerHTML]="data.h1"></h1>
+  </div>
+
+  <img src="{{ data.image_path }}" alt="" />
+</div>
+<a
+  href="#"
+  class="mt-8 text-center align-middle justify-center self-center font-bold inline-block rounded bg-primary px-12 py-3 text-sm text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+>
+  {{ data.cta_text }}
+</a>
+
+<!-- todo: center button 
+spacing 
+ -->
